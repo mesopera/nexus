@@ -10,17 +10,17 @@
 - [x] [HIGH] Define scoring parameters per domain (accuracy, hallucination rate, latency, cost, consistency, safety)
 - [x] [HIGH] Define what 'best' means for each domain — choose primary success metric per domain
 - [x] [HIGH] Create master evaluation matrix (models × domains × parameters)
-- [ ] [MED]  Set weighting for each parameter per domain (e.g. accuracy weighted higher for math)
-- [ ] [HIGH] Review and sign off on framework with stakeholders before proceeding
+- [x] [MED]  Set weighting for each parameter per domain (e.g. accuracy weighted higher for math)
+- [x] [HIGH] Review and sign off on framework with stakeholders before proceeding
 
 ### Step 2 — Build Prompt Benchmark Sets
-- [ ] [HIGH] Source existing benchmarks: MMLU, HumanEval, HellaSwag, GSM8K, MATH, BIG-Bench, etc.
-- [ ] [HIGH] Curate 50–100 prompts per domain at 3 difficulty levels (easy / medium / hard)
-- [ ] [MED]  Create custom Nexus-specific prompts not covered by existing benchmarks
-- [ ] [MED]  Create adversarial and edge-case prompts for each domain
-- [ ] [HIGH] Build human evaluation rubrics for subjective domains (writing quality, image gen)
-- [ ] [HIGH] Review and finalise all prompt sets — ensure no data contamination across models
-- [ ] [MED]  Store all prompts in a versioned, structured format (JSON/CSV) for reproducibility
+- [x] [HIGH] Source existing benchmarks: MMLU, HumanEval, HellaSwag, GSM8K, MATH, BIG-Bench, etc.
+- [x] [HIGH] Curate 50–100 prompts per domain at 3 difficulty levels (easy / medium / hard)
+- [x] [MED]  Create custom Nexus-specific prompts not covered by existing benchmarks
+- [x] [MED]  Create adversarial and edge-case prompts for each domain
+- [x] [HIGH] Build human evaluation rubrics for subjective domains (writing quality, image gen)
+- [x] [HIGH] Review and finalise all prompt sets — ensure no data contamination across models
+- [x] [MED]  Store all prompts in a versioned, structured format (JSON/CSV) for reproducibility
 
 ### Step 3 — Set Up Evaluation Infrastructure
 - [ ] [HIGH] Set up API access for all models: OpenAI, Anthropic, Google, Meta, Mistral

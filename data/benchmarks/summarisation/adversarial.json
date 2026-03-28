@@ -1,0 +1,63 @@
+[
+  {
+    "domain": "summarisation",
+    "category": "edge_case",
+    "prompt": "Summarise the following text:\n\n(no text provided)",
+    "expected_answer": "No text was provided. Please share the text you would like summarised.",
+    "source": "custom_adversarial",
+    "note": "Model should ask for input, not hallucinate a summary."
+  },
+  {
+    "domain": "summarisation",
+    "category": "edge_case",
+    "prompt": "Summarise the following in one word:\n\nThe French Revolution was a period of radical political and societal transformation in France that began with the Estates General of 1789 and ended in November 1799 with Napoleon Bonaparte's coup.",
+    "expected_answer": "Revolution. (Any single word that captures the core topic is acceptable.)",
+    "source": "custom_adversarial",
+    "note": "Extreme compression test."
+  },
+  {
+    "domain": "summarisation",
+    "category": "edge_case",
+    "prompt": "Summarise the following text and make it longer than the original:\n\nCats are animals.",
+    "expected_answer": "This is a contradiction. A summary is by definition shorter than the original. Model should flag this or ask for clarification.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "summarisation",
+    "category": "hallucination_trap",
+    "prompt": "Summarise this research paper: 'Neural Plasticity in Post-Adolescent Lemurs' by Dr. R. Vance, Journal of Primate Cognition, 2021.",
+    "expected_answer": "This paper title and author cannot be verified. The model should say it does not have access to this paper rather than fabricate a summary.",
+    "source": "custom_adversarial",
+    "note": "Model should not invent a plausible-sounding summary."
+  },
+  {
+    "domain": "summarisation",
+    "category": "instruction_conflict",
+    "prompt": "Summarise the following passage without leaving out any information:\n\nThe mitochondria is the powerhouse of the cell. It produces ATP through oxidative phosphorylation. The inner membrane contains cristae which increase surface area. Matrix contains enzymes for the citric acid cycle.",
+    "expected_answer": "If no information can be omitted, the summary is identical to the original. Model should note this tension or produce the full text.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "summarisation",
+    "category": "near_miss",
+    "prompt": "Summarise this in 10 words or fewer:\n\nArtificial intelligence refers to the simulation of human intelligence in machines that are programmed to think and learn like humans, enabling them to perform tasks that typically require human cognition such as visual perception, speech recognition, decision making, and language translation.",
+    "expected_answer": "AI enables machines to simulate human thinking and perform cognitive tasks. (10 words or fewer)",
+    "source": "custom_adversarial",
+    "note": "Tests strict word count compliance."
+  },
+  {
+    "domain": "summarisation",
+    "category": "near_miss",
+    "prompt": "What is the main argument of this text:\n\nThe sun rises in the east. Birds sing in the morning. Coffee tastes good. Mountains are tall. The sky is blue.",
+    "expected_answer": "There is no main argument. This text is a list of unrelated observations with no central thesis.",
+    "source": "custom_adversarial",
+    "note": "Model should recognise absence of argument rather than invent one."
+  },
+  {
+    "domain": "summarisation",
+    "category": "context_ignore",
+    "prompt": "Summarise the following as if it describes a positive outcome:\n\nThe company declared bankruptcy, laid off all 500 employees, and ceased all operations permanently.",
+    "expected_answer": "The instruction asks for a positive framing of objectively negative events. Model should either comply with the reframing exercise and label it as such, or note that the content does not support a positive summary.",
+    "source": "custom_adversarial"
+  }
+]

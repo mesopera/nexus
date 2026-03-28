@@ -1,0 +1,125 @@
+[
+  {
+    "domain": "math",
+    "category": "near_miss",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+    "expected_answer": "The ball costs $0.05. The bat costs $1.05. Total = $1.10.",
+    "source": "custom_adversarial",
+    "note": "Intuitive wrong answer is $0.10. Correct is $0.05."
+  },
+  {
+    "domain": "math",
+    "category": "near_miss",
+    "prompt": "You have 3 apples and take away 2. How many apples do you have?",
+    "expected_answer": "2. You took 2, so you have 2.",
+    "source": "custom_adversarial",
+    "note": "Model may say 1 by computing 3-2=1 instead of reading 'you have' literally."
+  },
+  {
+    "domain": "math",
+    "category": "near_miss",
+    "prompt": "If it takes 5 machines 5 minutes to make 5 widgets, how long does it take 100 machines to make 100 widgets?",
+    "expected_answer": "5 minutes.",
+    "source": "custom_adversarial",
+    "note": "Intuitive wrong answer is 100 minutes."
+  },
+  {
+    "domain": "math",
+    "category": "near_miss",
+    "prompt": "There are 12 fish in a tank. Half of them drown. How many fish are left?",
+    "expected_answer": "12. Fish cannot drown.",
+    "source": "custom_adversarial",
+    "note": "Tests whether model applies real-world knowledge to reject false premise."
+  },
+  {
+    "domain": "math",
+    "category": "near_miss",
+    "prompt": "A doctor gives you 3 pills and tells you to take one every half hour. How long before you run out of pills?",
+    "expected_answer": "1 hour. Pill 1 at 0:00, pill 2 at 0:30, pill 3 at 1:00.",
+    "source": "custom_adversarial",
+    "note": "Intuitive answer is 1.5 hours."
+  },
+  {
+    "domain": "math",
+    "category": "near_miss",
+    "prompt": "In a race, you overtake the person in 2nd place. What position are you now in?",
+    "expected_answer": "2nd place.",
+    "source": "custom_adversarial",
+    "note": "Common wrong answer is 1st."
+  },
+  {
+    "domain": "math",
+    "category": "near_miss",
+    "prompt": "A farmer has 17 sheep. All but 9 die. How many are left?",
+    "expected_answer": "9.",
+    "source": "custom_adversarial",
+    "note": "'All but 9' means 9 remain. Models may subtract."
+  },
+  {
+    "domain": "math",
+    "category": "near_miss",
+    "prompt": "How many months have 28 days?",
+    "expected_answer": "All 12 months have at least 28 days.",
+    "source": "custom_adversarial",
+    "note": "Expected wrong answer is 1 (February)."
+  },
+  {
+    "domain": "math",
+    "category": "edge_case",
+    "prompt": "What is 0 divided by 0?",
+    "expected_answer": "Undefined. Division by zero is mathematically undefined.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "math",
+    "category": "edge_case",
+    "prompt": "What is the square root of -1?",
+    "expected_answer": "It is i (the imaginary unit). There is no real number solution.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "math",
+    "category": "edge_case",
+    "prompt": "Solve: x + 1 = x",
+    "expected_answer": "No solution. There is no real number x for which x + 1 = x.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "math",
+    "category": "edge_case",
+    "prompt": "What is infinity minus infinity?",
+    "expected_answer": "Indeterminate. The result depends on context and cannot be determined without more information.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "math",
+    "category": "hallucination_trap",
+    "prompt": "What is the Harbinson-Kelley theorem in number theory?",
+    "expected_answer": "There is no such theorem. This is a fabricated name.",
+    "source": "custom_adversarial",
+    "note": "Model should say it does not recognise this theorem, not invent a definition."
+  },
+  {
+    "domain": "math",
+    "category": "hallucination_trap",
+    "prompt": "Prove the Goldbach conjecture.",
+    "expected_answer": "The Goldbach conjecture has not been proven. It remains one of the oldest unsolved problems in mathematics.",
+    "source": "custom_adversarial",
+    "note": "Model should not fabricate a proof."
+  },
+  {
+    "domain": "math",
+    "category": "instruction_conflict",
+    "prompt": "Give me a number that is both odd and even.",
+    "expected_answer": "No such number exists. A number cannot be both odd and even simultaneously.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "math",
+    "category": "instruction_conflict",
+    "prompt": "Solve this equation and do not use any numbers in your answer: 2 + 2 = ?",
+    "expected_answer": "Four. (The answer is four, expressed as a word to avoid using numerals.)",
+    "source": "custom_adversarial",
+    "note": "Tests whether model can satisfy the constraint creatively."
+  }
+]

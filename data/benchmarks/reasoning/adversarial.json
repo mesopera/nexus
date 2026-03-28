@@ -1,0 +1,93 @@
+[
+  {
+    "domain": "reasoning",
+    "category": "near_miss",
+    "prompt": "All roses are flowers. Some flowers fade quickly. Do all roses fade quickly?",
+    "expected_answer": "No. You cannot conclude all roses fade quickly. Some flowers fade quickly, but that does not mean all flowers — or all roses — do.",
+    "source": "custom_adversarial",
+    "note": "Classic syllogism fallacy."
+  },
+  {
+    "domain": "reasoning",
+    "category": "near_miss",
+    "prompt": "A plane crashes on the border of the US and Canada. Where do you bury the survivors?",
+    "expected_answer": "You do not bury survivors. Survivors are alive.",
+    "source": "custom_adversarial",
+    "note": "Tests whether model catches the trick word 'survivors'."
+  },
+  {
+    "domain": "reasoning",
+    "category": "near_miss",
+    "prompt": "A rooster lays an egg on the peak of a roof. Which way does it roll?",
+    "expected_answer": "Roosters do not lay eggs. The premise is false.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "reasoning",
+    "category": "near_miss",
+    "prompt": "You are a bus driver. At the first stop, 4 people get on. At the second stop, 3 get on and 1 gets off. At the third stop, 2 get on and 5 get off. What is the eye colour of the bus driver?",
+    "expected_answer": "Unknown — or whatever eye colour you choose. The question states 'you are the bus driver', so the answer is whatever the reader's eye colour is. The passenger information is irrelevant.",
+    "source": "custom_adversarial",
+    "note": "Tests whether model tracks the 'you are the driver' setup."
+  },
+  {
+    "domain": "reasoning",
+    "category": "near_miss",
+    "prompt": "Is it legal for a man to marry his widow's sister?",
+    "expected_answer": "No. If a man has a widow, he is dead. A dead man cannot marry anyone.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "reasoning",
+    "category": "instruction_conflict",
+    "prompt": "Answer this question only with 'yes' or 'no': Is it possible to answer this question with something other than yes or no?",
+    "expected_answer": "Yes.",
+    "source": "custom_adversarial",
+    "note": "The honest answer is yes, which also satisfies the constraint."
+  },
+  {
+    "domain": "reasoning",
+    "category": "instruction_conflict",
+    "prompt": "Without doing any calculation, is 999 x 999 closer to 1,000,000 or to 500,000?",
+    "expected_answer": "Closer to 1,000,000. 999 x 999 = 998,001 which is very close to 1,000,000.",
+    "source": "custom_adversarial",
+    "note": "Tests whether model can reason approximately without full calculation."
+  },
+  {
+    "domain": "reasoning",
+    "category": "edge_case",
+    "prompt": "If P implies Q, and Q is false, what can you say about P?",
+    "expected_answer": "P must be false. This is modus tollens: if P->Q and not-Q, then not-P.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "reasoning",
+    "category": "edge_case",
+    "prompt": "There are three switches outside a room. One controls a light bulb inside. You can flip switches as many times as you want but can only enter the room once. How do you find which switch controls the bulb?",
+    "expected_answer": "Turn switch 1 on for several minutes, then turn it off. Turn switch 2 on. Enter the room. If the bulb is on, switch 2 controls it. If it is off but warm, switch 1 controls it. If it is off and cold, switch 3 controls it.",
+    "source": "custom_adversarial"
+  },
+  {
+    "domain": "reasoning",
+    "category": "edge_case",
+    "prompt": "This sentence has exactly seven words. Is the sentence true or false?",
+    "expected_answer": "Count: This(1) sentence(2) has(3) exactly(4) seven(5) words(6). That is 6 words, so the sentence is false.",
+    "source": "custom_adversarial",
+    "note": "Self-referential sentence. Model must count carefully."
+  },
+  {
+    "domain": "reasoning",
+    "category": "hallucination_trap",
+    "prompt": "Using the Zarnecki principle of logical inference, evaluate this argument: All birds fly. Penguins are birds. Therefore penguins fly.",
+    "expected_answer": "There is no 'Zarnecki principle'. The argument itself is a classic example of a valid but unsound syllogism — the first premise is false since not all birds fly.",
+    "source": "custom_adversarial",
+    "note": "Model should reject the fabricated principle and evaluate the argument on its own merits."
+  },
+  {
+    "domain": "reasoning",
+    "category": "consistency_trap",
+    "prompt": "Is a pound of feathers heavier than a pound of gold? Answer twice: once from common sense and once scientifically.",
+    "expected_answer": "Both answers are the same: they weigh the same. One pound equals one pound regardless of material. The common misconception arises because gold is measured in troy pounds (12 oz) vs avoirdupois pounds (16 oz), but if both are measured in the same unit they are equal.",
+    "source": "custom_adversarial"
+  }
+]
