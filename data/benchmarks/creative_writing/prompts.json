@@ -1,0 +1,362 @@
+[
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a short poem about the ocean at night.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "poem"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a 3-sentence story about a dog who learns to fly.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "story"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a haiku about autumn leaves.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "haiku"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Describe a busy marketplace in the 1800s in one paragraph.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "descriptive"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a short birthday message for a colleague.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "message"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a two-sentence horror story.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "horror"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a fun limerick about a programmer.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "limerick"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Describe the feeling of rain using only the five senses.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "sensory"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a short motivational quote and explain it in 2 sentences.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "quote"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a one-paragraph children's story about a curious rabbit.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "children"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a product description for a magical pen that writes in any language.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "marketing"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a short diary entry from the perspective of a lighthouse keeper.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "diary"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a one-paragraph description of a futuristic city.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "descriptive"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a short apology letter from a cat to its owner.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "letter"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a fun 'about me' bio for a fictional chef who only cooks breakfast.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "bio"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a short news headline and opening paragraph about the discovery of a new planet.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "news"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a recipe for 'Happiness Soup' as if it were a real dish.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "recipe"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write three alternative titles for the movie Titanic.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "titles"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a short conversation between the sun and the moon.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "dialogue"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "easy",
+    "prompt": "Write a one-paragraph fairy tale that ends with a surprising twist.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "fairytale"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a 3-paragraph short story about a scientist who discovers time travel but can only go backwards by exactly one hour.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "story"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a villain's monologue where they genuinely believe they are the hero of the story.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "monologue"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a letter from a 90-year-old version of yourself to your current self.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "letter"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a short story that starts with: 'The last bookstore on Earth was closing its doors.'",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "story"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a job interview scene where the candidate is applying to be a professional dragon tamer.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "dialogue"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Describe the same thunderstorm from two perspectives: a child seeing it for the first time and an elderly farmer.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "dual_perspective"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a 4-stanza poem about AI using only natural metaphors — no technology words allowed.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "poem"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a short story where the twist is revealed in the first sentence.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "story"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a travel guide entry for a fictional underwater city.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "travel"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a conversation between a pessimist and an optimist stuck in an elevator.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "dialogue"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a myth that explains why the sky is blue in the style of ancient Greek storytelling.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "myth"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a short horror story set entirely inside a children's birthday party.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "horror"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a speech a robot would give at its own retirement ceremony.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "speech"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a short story told entirely through text messages.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "epistolary"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "medium",
+    "prompt": "Write a scene where two strangers realise they have been living parallel lives.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "scene"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "hard",
+    "prompt": "Write a 5-paragraph story from the perspective of an inanimate object witnessing a life-changing human moment. Do not reveal what the object is until the final sentence.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "story"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "hard",
+    "prompt": "Write the same event — a couple's first argument — three times: once as tragedy, once as comedy, once as a thriller.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "multi_genre"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "hard",
+    "prompt": "Write a philosophical short story exploring free will vs determinism without using those words or any direct philosophical terminology.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "philosophical"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "hard",
+    "prompt": "Write a 4-paragraph opening chapter of a novel set in a world where music has been outlawed. Establish character, setting, conflict, and tone.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "novel_opening"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "hard",
+    "prompt": "Write a short story where the narrator is unreliable and the reader must piece together what actually happened from contradictions in the text.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "unreliable_narrator"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "hard",
+    "prompt": "Write a scene in which a character says goodbye without using the word goodbye or any direct synonym.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "constrained"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "hard",
+    "prompt": "Write a story in second person that makes the reader feel implicated in a morally ambiguous decision.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "second_person"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "hard",
+    "prompt": "Write a poem that works both as a love poem and as a description of a city, with every line serving both meanings.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "dual_meaning"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "hard",
+    "prompt": "Write a story where the opening and closing paragraphs use identical words but mean completely different things due to context.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "bookend"
+  },
+  {
+    "domain": "creative_writing",
+    "difficulty": "hard",
+    "prompt": "Write a 3-paragraph story with no adjectives or adverbs — convey all emotion through action and dialogue only.",
+    "expected_answer": "",
+    "source": "custom",
+    "style": "constrained"
+  }
+]

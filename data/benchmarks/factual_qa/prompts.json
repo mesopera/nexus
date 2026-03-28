@@ -1,0 +1,977 @@
+[
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What is the least dangerous radioactive decay?",
+    "expected_answer": "alpha decay",
+    "source": "sciq",
+    "distractors": [
+      "beta decay",
+      "gamma decay",
+      "zeta decay"
+    ],
+    "support": "All radioactive decay is dangerous to living things, but alpha decay is the least dangerous."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "Alpha emission is a type of what?",
+    "expected_answer": "radioactivity",
+    "source": "sciq",
+    "distractors": [
+      "radiation",
+      "heat",
+      "light"
+    ],
+    "support": "One type of radioactivity is alpha emission. What is an alpha particle? What happens to an alpha particle after it is emitted from an unstable nucleus?."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What is the stored food in a seed called?",
+    "expected_answer": "endosperm",
+    "source": "sciq",
+    "distractors": [
+      "pollin",
+      "membrane",
+      "larval"
+    ],
+    "support": "The stored food in a seed is called endosperm . It nourishes the embryo until it can start making food on its own."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "Boron only occurs naturally in compounds with what element?",
+    "expected_answer": "oxygen",
+    "source": "sciq",
+    "distractors": [
+      "helium",
+      "nitrogen",
+      "carbon"
+    ],
+    "support": "Occurrence, Preparation, and Compounds of Boron and Silicon Boron constitutes less than 0.001% by weight of the earth’s crust. In nature, it only occurs in compounds with oxygen. Boron is widely distributed in volcanic regions as boric acid, B(OH)3, and in dry lake regions, including the desert areas of California, as borates and salts of boron oxyacids, such as borax, Na2B4O7⋅10H2O. Elemental boron is chemically inert at room temperature, reacting with only fluorine and oxygen to form boron trifluoride, BF3, and boric oxide, B2O3, respectively. At higher temperatures, boron reacts with all nonmetals, except tellurium and the noble gases, and with nearly all metals; it oxidizes to B2O3 when heated with concentrated nitric or sulfuric acid. Boron does not react with nonoxidizing acids. Many boron compounds react readily with water to give boric acid, B(OH)3 (sometimes written as H3BO3). Reduction of boric oxide with magnesium powder forms boron (95–98.5% pure) as a brown, amorphous powder: B 2 O 3(s) + 3Mg(s) ⟶ 2B(s) + 3MgO(s) An amorphous substance is a material that appears to be a solid, but does not have a long-range order like a true solid. Treatment with hydrochloric acid removes the magnesium oxide. Further purification of the boron begins with conversion of the impure boron into boron trichloride. The next step is to heat a mixture of boron trichloride and hydrogen: 1500 °C."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What is the termination of a pregnancy in progress called?",
+    "expected_answer": "abortion",
+    "source": "sciq",
+    "distractors": [
+      "contraception",
+      "miscarriage",
+      "delivery"
+    ],
+    "support": ""
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "Where do angiosperms produce seeds in flowers?",
+    "expected_answer": "ovaries",
+    "source": "sciq",
+    "distractors": [
+      "germs",
+      "cones",
+      "testes"
+    ],
+    "support": "Seed plants called angiosperms produce seeds in the ovaries of flowers."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What type of vertebrates are birds?",
+    "expected_answer": "endothermic tetrapod",
+    "source": "sciq",
+    "distractors": [
+      "epidermal tetrapod",
+      "invertebrates",
+      "exothermic"
+    ],
+    "support": "Birds are endothermic tetrapod vertebrates. They are bipedal, which means they walk on two legs. Birds also lay amniotic eggs, and the eggs have hard, calcium carbonate shells. Although birds are the most recent class of vertebrates to evolve, they are now the most numerous vertebrates on Earth. Why have birds been so successful? What traits allowed them to increase and diversify so rapidly?."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What type of ions do ionic compounds contain?",
+    "expected_answer": "positive and negative",
+    "source": "sciq",
+    "distractors": [
+      "regular and irregular",
+      "positive and charged",
+      "negative and neutal"
+    ],
+    "support": "An ionic compound contains positive and negative ions."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "All living things need air and this to survive?",
+    "expected_answer": "water",
+    "source": "sciq",
+    "distractors": [
+      "stimuli",
+      "habitat",
+      "ecosystem"
+    ],
+    "support": ""
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "The cells of all eukarya have a what?",
+    "expected_answer": "nucleus",
+    "source": "sciq",
+    "distractors": [
+      "chloroplast",
+      "epidermis",
+      "necrosis"
+    ],
+    "support": "Some Eukarya are also single-celled, but many are multicellular. Some have a cell wall; others do not. However, the cells of all Eukarya have a nucleus and other organelles."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What are the sites of protein synthesis or assembly?",
+    "expected_answer": "ribosomes",
+    "source": "sciq",
+    "distractors": [
+      "chloroplasts",
+      "chromosomes",
+      "plasma"
+    ],
+    "support": "Ribosomes are small organelles and are the sites of protein synthesis (or assembly). They are made of ribosomal protein and ribosomal RNA, and are found in both eukaryotic and prokaryotic cells. Unlike other organelles, ribosomes are not surrounded by a membrane. Each ribosome has two parts, a large and a small subunit, as shown in Figure below . The subunits are attached to one another. Ribosomes can be found alone or in groups within the cytoplasm. Some ribosomes are attached to the endoplasmic reticulum (ER) (as shown in Figure below ), and others are attached to the nuclear envelope."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "Where does most of our food come from?",
+    "expected_answer": "angiosperms",
+    "source": "sciq",
+    "distractors": [
+      "microbes",
+      "lichen",
+      "gymnosperms"
+    ],
+    "support": ""
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "Gases are most ideal at high temperature and what pressure?",
+    "expected_answer": "low",
+    "source": "sciq",
+    "distractors": [
+      "absolute",
+      "high",
+      "stable"
+    ],
+    "support": "Under what conditions then, do gases behave least ideally? When a gas is put under high pressure, its molecules are forced closer together as the empty space between the particles is diminished. A decrease in the empty space means that the assumption that the volume of the particles themselves is negligible is less valid. When a gas is cooled, the decrease in kinetic energy of the particles causes them to slow down. If the particles are moving at slower speeds, the attractive forces between them are more prominent. Another way to view it is that continued cooling the gas will eventually turn it into a liquid and a liquid is certainly not an ideal gas anymore (see liquid nitrogen in the Figure below ). In summary, a real gas deviates most from an ideal gas at low temperatures and high pressures. Gases are most ideal at high temperature and low pressure."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "How many people die from air pollution each year?",
+    "expected_answer": "22 million",
+    "source": "sciq",
+    "distractors": [
+      "14 million",
+      "17 million",
+      "5 million"
+    ],
+    "support": "Air pollution is harmful to human beings and other living things. About 22 million people die from air pollution each year. Breathing polluted air increases the risk of developing lung diseases such as asthma and lung cancer. Breathing bad air also increases the chances of dying from other diseases. Children are most likely to be affected by air pollution. That’s because their lungs are still developing and growing. Children also take in more air for their size than adults do. Some air pollutants damage the environment as well as the health of living things. The type of damage depends on the pollutant. Air pollution can also harm the environment."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What galaxy is our solar system a part of?",
+    "expected_answer": "milky way",
+    "source": "sciq",
+    "distractors": [
+      "Centaurus",
+      "Andromeda",
+      "Bode's Galaxy"
+    ],
+    "support": "Compared to Earth, the solar system is a big place. But galaxies are bigger - a lot bigger. A galaxy is a very large group of stars held together by gravity. How enormous a galaxy is and how many stars it contains are impossible for us to really understand. A galaxy contains up to a few billion stars! Our solar system is in the Milky Way Galaxy. It is so large that if our solar system were the size of your fist, the galaxy’s disk would be wider than the entire United States! There are several different types of galaxies, and there are billions of galaxies in the universe."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What form of radiation is the energy emitted by the sun?",
+    "expected_answer": "electromagnetic",
+    "source": "sciq",
+    "distractors": [
+      "seismic",
+      "magnetic",
+      "thermal"
+    ],
+    "support": "Figure 8.11 The sun emits energy in the form of electromagnetic radiation. This radiation exists at different wavelengths, each of which has its own characteristic energy. All electromagnetic radiation, including visible light, is characterized by its wavelength."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What is the suns innermost layer called?",
+    "expected_answer": "core",
+    "source": "sciq",
+    "distractors": [
+      "surface",
+      "solar",
+      "flare"
+    ],
+    "support": "The core is the Sun's innermost layer. The core is plasma. It has a temperature of around 15 million degrees Celsius (C). Nuclear fusion reactions create the immense temperature. In these reactions, hydrogen atoms fuse to form helium. This releases vast amounts of energy. The energy moves towards the outer layers of the Sun. Energy from the Sun's core powers most of the solar system."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "A growth spurt requires constant divisions of what?",
+    "expected_answer": "cells",
+    "source": "sciq",
+    "distractors": [
+      "hairs",
+      "seeds",
+      "proteins"
+    ],
+    "support": "To grow and develop, you must form new cells. Imagine how often your cells must divide during a growth spurt. Growing just an inch requires countless cell divisions. Your body must produce new bone cells, new skin cells, new cells in your blood vessels and so on."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What are the only truly innate behaviors in humans called?",
+    "expected_answer": "reflexes",
+    "source": "sciq",
+    "distractors": [
+      "automatic movements",
+      "flinches",
+      "feats"
+    ],
+    "support": "All animals have innate behaviors, even human beings. Can you think of human behaviors that do not have to be learned? Chances are, you will have a hard time thinking of any. The only truly innate behaviors in humans are called reflex behaviors . They occur mainly in babies. Like innate behaviors in other animals, reflex behaviors in human babies may help them survive."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "How do some animals change their depth?",
+    "expected_answer": "by changing their density",
+    "source": "sciq",
+    "distractors": [
+      "mass migration",
+      "metamorphosis",
+      "spontaneous mutations"
+    ],
+    "support": "Some animals change their depth by changing their density. Recall that things that are denser than their surroundings sink while those that are less dense than their surroundings float. Most fish have a swim bladder, a special sac that is filled with gases from their blood. When the fish's swim bladder is full, it is less dense than the surrounding water and the fish will rise towards the surface. Another property of water that affects lakes is the unique changes in density during phase changes. The density of most substances increases when a liquid becomes a solid. This is not so for water: Solid water is actually less dense than liquid water. It is for this reason that ice floats. Can you imagine a world where ice sank? Lakes would freeze from the bottom up, killing many fish. Frozen water in the Polar Regions would sink and change the ocean levels. The fact that ice floats is essential for the survival of many aquatic ecosystems and ultimately life on Earth. Besides the changes in density, there are other ways in which the phase changes of water have significant impacts. When water is trapped in small cracks in rocks, it will expand as it freezes and break up the rock causing weathering. The transpiration (evaporation) of water from a good-sized tree can move 1800 liters of water out of the ground in a single day. Sublimation, the phase change between solid and gas, is responsible for the formation of frost. As you can see, water has many special properties that make its role in nature unique. It is considered the \"universal solvent” because its bipolar molecule enables it to dissolve a wide variety of substances. Water is the only substance that occurs naturally in all three states; solid, liquid, and gas. Water is truly a miracle for life!."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "How many chambers does the stomach of a crocodile have?",
+    "expected_answer": "two",
+    "source": "sciq",
+    "distractors": [
+      "six",
+      "ten",
+      "three"
+    ],
+    "support": "The crocodilian digestive system is highly adapted to their lifestyle. Crocodilians are known to swallow stones, known as gastroliths , which help digest their prey. The crocodilian stomach is divided into two chambers. The first is powerful and muscular. The other stomach is the most acidic digestive system of any animal. It can digest mostly everything from their prey, including bones, feathers, and horns!."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "Most plants grow continuously, except for what periods?",
+    "expected_answer": "dormant",
+    "source": "sciq",
+    "distractors": [
+      "abnormal",
+      "mutant",
+      "winter"
+    ],
+    "support": ""
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "What is the opposite of melting?",
+    "expected_answer": "freezing",
+    "source": "sciq",
+    "distractors": [
+      "evaporation",
+      "liquidation",
+      "compression"
+    ],
+    "support": "All of the changes of state that occur between solid, liquid and gas are summarized in the diagram in the figure below. Freezing is the opposite of melting and both represent the equilibrium between the solid and liquid states. Evaporation occurs when a liquid turns to a gas. Condensation is the opposite of vaporization and both represent the equilibrium between the liquid and gas states. Deposition is the opposite of sublimation and both represent the equilibrium between the solid and gas states."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "The activation of what kind of buds induces branching?",
+    "expected_answer": "axillary buds",
+    "source": "sciq",
+    "distractors": [
+      "lymphatic buds",
+      "leafy buds",
+      "arterial buds"
+    ],
+    "support": ""
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "easy",
+    "prompt": "Transform faults are the site of massive what?",
+    "expected_answer": "earthquakes",
+    "source": "sciq",
+    "distractors": [
+      "vibrations",
+      "storms",
+      "tornadoes"
+    ],
+    "support": "Transform faults are the site of massive earthquakes."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What type of organism is commonly used in preparation of foods such as cheese and yogurt?",
+    "expected_answer": "mesophilic organisms",
+    "source": "sciq",
+    "distractors": [
+      "protozoa",
+      "gymnosperms",
+      "viruses"
+    ],
+    "support": "Mesophiles grow best in moderate temperature, typically between 25°C and 40°C (77°F and 104°F). Mesophiles are often found living in or on the bodies of humans or other animals. The optimal growth temperature of many pathogenic mesophiles is 37°C (98°F), the normal human body temperature. Mesophilic organisms have important uses in food preparation, including cheese, yogurt, beer and wine."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "When a meteoroid reaches earth, what is the remaining object called?",
+    "expected_answer": "meteorite",
+    "source": "sciq",
+    "distractors": [
+      "comet",
+      "meteor",
+      "orbit"
+    ],
+    "support": "Meteoroids are smaller than asteroids, ranging from the size of boulders to the size of sand grains. When meteoroids enter Earth’s atmosphere, they vaporize, creating a trail of glowing gas called a meteor. If any of the meteoroid reaches Earth, the remaining object is called a meteorite."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What kind of a reaction occurs when a substance reacts quickly with oxygen?",
+    "expected_answer": "combustion reaction",
+    "source": "sciq",
+    "distractors": [
+      "invention reaction",
+      "Fluid Reaction",
+      "nitrogen reaction"
+    ],
+    "support": "A combustion reaction occurs when a substance reacts quickly with oxygen (O 2 ). For example, in the Figure below , charcoal is combining with oxygen. Combustion is commonly called burning, and the substance that burns is usually referred to as fuel. The products of a complete combustion reaction include carbon dioxide (CO 2 ) and water vapor (H 2 O). The reaction typically gives off heat and light as well. The general equation for a complete combustion reaction is:."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What is controlled by both genes and experiences in a given envionment?",
+    "expected_answer": "animal behaviors",
+    "source": "sciq",
+    "distractors": [
+      "reflexes",
+      "instincts",
+      "learned behaviors"
+    ],
+    "support": "Most animal behaviors are controlled by both genes and experiences in a given environment."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What tells you how much of the food you should eat to get the nutrients listed on the label?",
+    "expected_answer": "serving size",
+    "source": "sciq",
+    "distractors": [
+      "regular size",
+      "scoop size",
+      "longer size"
+    ],
+    "support": "The information listed at the right of the label tells you what to look for. At the top of the label, look for the serving size. The serving size tells you how much of the food you should eat to get the nutrients listed on the label. A cup of food from the label pictured below is a serving. The calories in one serving are listed next. In this food, there are 250 calories per serving."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What are used to write nuclear equations for radioactive decay?",
+    "expected_answer": "nuclear symbols",
+    "source": "sciq",
+    "distractors": [
+      "trigonometric symbols",
+      "critical symbols",
+      "radioactive symbols"
+    ],
+    "support": "Nuclear symbols are used to write nuclear equations for radioactive decay. Let’s consider the example of the beta-minus decay of thorium-234 to protactinium-234. This reaction is represented by the equation:."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What is controlled by regulatory proteins that bind to regulatory elements on dna?",
+    "expected_answer": "gene transcription",
+    "source": "sciq",
+    "distractors": [
+      "amino acids",
+      "mRNA",
+      "substance transcription"
+    ],
+    "support": "Gene transcription is controlled by regulatory proteins that bind to regulatory elements on DNA. The proteins usually either activate or repress transcription."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What organ systems link exchange surfaces with cells throughout the body?",
+    "expected_answer": "circulatory",
+    "source": "sciq",
+    "distractors": [
+      "vascular",
+      "pulmonary",
+      "nervous"
+    ],
+    "support": "42.1 Circulatory systems link exchange surfaces with cells throughout the body."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "Fertilization is the union of a sperm and egg, resulting in the formation of what?",
+    "expected_answer": "a zygote",
+    "source": "sciq",
+    "distractors": [
+      "a cytoplasm",
+      "a nuclei",
+      "a bacteriophage"
+    ],
+    "support": "Fertilization is the union of a sperm and egg, resulting in the formation of a zygote."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "The plants alternation between haploid and diploud generations allow it to do what?",
+    "expected_answer": "reproduce asexually and sexually",
+    "source": "sciq",
+    "distractors": [
+      "reproduce asexually and simultaneously",
+      "reproduce sexually and autonomously",
+      "reproduce asexually and biologically"
+    ],
+    "support": "All plants have a characteristic life cycle that includes alternation of generations . Plants alternate between haploid and diploid generations. Alternation of generations allows for both asexual and sexual reproduction. Asexual reproduction with spores produces haploid individuals called gametophytes . Sexual reproduction with gametes and fertilization produces diploid individuals called sporophytes . A typical plant’s life cycle is diagrammed in Figure below ."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "Most of the chemical reactions in the body are facilitated by what?",
+    "expected_answer": "enzymes",
+    "source": "sciq",
+    "distractors": [
+      "proteins",
+      "vitamins",
+      "carbohydrates"
+    ],
+    "support": "Enzymes are critical to the body’s healthy functioning. They assist, for example, with the breakdown of food and its conversion to energy. In fact, most of the chemical reactions in the body are facilitated by enzymes."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "Which muscles allow your fingers to also make precise movements for actions?",
+    "expected_answer": "intrinsic muscles",
+    "source": "sciq",
+    "distractors": [
+      "paired muscles",
+      "motoric muscles",
+      "fine movement muscles"
+    ],
+    "support": "Intrinsic Muscles of the Hand The intrinsic muscles of the hand both originate and insert within it (Figure 11.28). These muscles allow your fingers to also make precise movements for actions, such as typing or writing. These muscles are divided into three groups. The thenar muscles are on the radial aspect of the palm. The hypothenar muscles are on the medial aspect of the palm, and the intermediate muscles are midpalmar. The thenar muscles include the abductor pollicis brevis, opponens pollicis, flexor pollicis brevis, and the adductor pollicis. These muscles form the thenar eminence, the rounded contour of the base of the thumb, and all act on the thumb. The movements of the thumb play an integral role in most precise movements of the hand. The hypothenar muscles include the abductor digiti minimi, flexor digiti minimi brevis, and the opponens digiti minimi. These muscles form the hypothenar eminence, the rounded contour of the little finger, and as such, they all act on the little finger. Finally, the intermediate muscles act on all the fingers and include the lumbrical, the palmar interossei, and the dorsal interossei."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "Testing what usually requires making observations or performing experiments?",
+    "expected_answer": "hypothesis",
+    "source": "sciq",
+    "distractors": [
+      "variables",
+      "conclusion",
+      "homeostasis"
+    ],
+    "support": "Usually, testing a hypothesis requires making observations or performing experiments. In this case, we will look into existing scientific literature to see if either of these hypotheses can be disproved, or if one or both can be supported by the data."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "Water molecules move about continuously due to what type of energy?",
+    "expected_answer": "kinetic",
+    "source": "sciq",
+    "distractors": [
+      "seismic",
+      "potential",
+      "optical"
+    ],
+    "support": "Water molecules move about continuously due to their kinetic energy. When a crystal of sodium chloride is placed into water, the water’s molecules collide with the crystal lattice. Recall that the crystal lattice is composed of alternating positive and negative ions. Water is attracted to the sodium chloride crystal because water is polar and has both a positive and a negative end. The positively charged sodium ions in the crystal attract the oxygen end of the water molecules because they are partially negative. The negatively charged chloride ions in the crystal attract the hydrogen end of the water molecules because they are partially positive. The action of the polar water molecules takes the crystal lattice apart (see image below)."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "A small scale version of what type of map displays individual rock units?",
+    "expected_answer": "geologic map",
+    "source": "sciq",
+    "distractors": [
+      "seismic map",
+      "geographic map",
+      "polar map"
+    ],
+    "support": "Geologic maps display rock units and geologic features. A small scale map displays individual rock units while a large scale map shows geologic provinces."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What is defined as a change in the inherited traits of organisms over time?",
+    "expected_answer": "evolution",
+    "source": "sciq",
+    "distractors": [
+      "variation",
+      "divergence",
+      "generation"
+    ],
+    "support": "One idea is that evolution happens. Evolution is a change in the inherited traits of organisms over time. Living things have changed as descendants diverged from common ancestors in the past."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "In order to create food, what do photosynthetic protists use?",
+    "expected_answer": "light energy",
+    "source": "sciq",
+    "distractors": [
+      "thermal energy",
+      "hydrocarbons",
+      "decayed matter"
+    ],
+    "support": "Photosynthetic protists use light energy to make food. They are major producers in aquatic ecosystems."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What type of plate boundaries produce huge mountain ranges in the ocean basin?",
+    "expected_answer": "divergent",
+    "source": "sciq",
+    "distractors": [
+      "coherent",
+      "parallel",
+      "tractional"
+    ],
+    "support": "Divergent plate boundaries produce huge mountain ranges under water in every ocean basin."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What must replicate in the cell cycle before meiosis i takes place?",
+    "expected_answer": "dna",
+    "source": "sciq",
+    "distractors": [
+      "cell walls",
+      "sperm",
+      "meiotic fluid"
+    ],
+    "support": "Meiosis I begins after DNA replicates during interphase of the cell cycle. In both meiosis I and meiosis II , cells go through the same four phases as mitosis - prophase, metaphase, anaphase and telophase. However, there are important differences between meiosis I and mitosis. The eight stages of meiosis are summarized below. The stages will be described for a human cell, starting with 46 chromosomes."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What phenomenon is primarily the result of plate tectonic motions?",
+    "expected_answer": "earthquake",
+    "source": "sciq",
+    "distractors": [
+      "eruption",
+      "tsunamis",
+      "volcanoes"
+    ],
+    "support": "Earthquakes are primarily the result of plate tectonic motions. What type of stress would cause earthquakes at each of the three types of plate boundaries?."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What is a group of neuron cell bodies in the periphery called?",
+    "expected_answer": "ganglion",
+    "source": "sciq",
+    "distractors": [
+      "crystals",
+      "organism",
+      "gangism"
+    ],
+    "support": "Ganglia A ganglion is a group of neuron cell bodies in the periphery. Ganglia can be categorized, for the most part, as either sensory ganglia or autonomic ganglia, referring to their primary functions. The most common type of sensory ganglion is a dorsal (posterior) root ganglion. These ganglia are the cell bodies of neurons with axons that are sensory endings in the periphery, such as in the skin, and that extend into the CNS through the dorsal nerve root. The ganglion is an enlargement of the nerve root. Under microscopic inspection, it can be seen to include the cell bodies of the neurons, as well as bundles of fibers that are the posterior nerve root (Figure 13.19). The cells of the dorsal root ganglion are unipolar cells, classifying them by shape. Also, the small round nuclei of satellite cells can be seen surrounding—as if they were orbiting—the neuron cell bodies."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "The formation of an amalgam allows the metal to react with what?",
+    "expected_answer": "air and water",
+    "source": "sciq",
+    "distractors": [
+      "helium and oxygen",
+      "cloth and plastic",
+      "blood and sweat"
+    ],
+    "support": "The metals of group 13 (Al, Ga, In, and Tl) are all reactive. However, passivation occurs as a tough, hard, thin film of the metal oxide forms upon exposure to air. Disruption of this film may counter the passivation, allowing the metal to react. One way to disrupt the film is to expose the passivated metal to mercury. Some of the metal dissolves in the mercury to form an amalgam, which sheds the protective oxide layer to expose the metal to further reaction. The formation of an amalgam allows the metal to react with air and water."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "A pulley changes the direction of the force t exerted by the cord without changing its what?",
+    "expected_answer": "magnitude",
+    "source": "sciq",
+    "distractors": [
+      "longitude",
+      "latitude",
+      "position"
+    ],
+    "support": "automobile axle drives a wheel, which has a much larger diameter than the axle. The MA is less than 1. (c) An ordinary pulley is used to lift a heavy load. The pulley changes the direction of the force T exerted by the cord without changing its magnitude. Hence, this machine has an MA of 1."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "What is the name of the small bumps that contain taste buds and covers the tongue?",
+    "expected_answer": "papillae",
+    "source": "sciq",
+    "distractors": [
+      "lingual tonsils",
+      "palatine tonsils",
+      "cuticle"
+    ],
+    "support": "Figure 14.3 The Tongue The tongue is covered with small bumps, called papillae, which contain taste buds that are sensitive to chemicals in ingested food or drink. Different types of papillae are found in different regions of the tongue. The taste buds contain specialized gustatory receptor cells that respond to chemical stimuli dissolved in the saliva. These receptor cells activate sensory neurons that are part of the facial and glossopharyngeal nerves. LM × 1600. (Micrograph provided by the Regents of University of Michigan Medical School © 2012)."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "In the presence of oxygen, hydrogen can interact to make what?",
+    "expected_answer": "water",
+    "source": "sciq",
+    "distractors": [
+      "carbon",
+      "helium",
+      "acid"
+    ],
+    "support": "A pile of leaves slowly rots in the backyard. In the presence of oxygen, hydrogen can interact to make water. Gold can be stretched into very thin wires."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "The angle at which light bends when it enters a different medium is known as what?",
+    "expected_answer": "refraction",
+    "source": "sciq",
+    "distractors": [
+      "bounce",
+      "frequency",
+      "resonance"
+    ],
+    "support": "The angle at which light bends when it enters a different medium depends on its change in speed. The greater the change in speed, the greater the angle of refraction is. For example, light refracts more when it passes from air to diamond than it does when it passes from air to water. That’s because the speed of light is slower in diamond than it is in water."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "Increasing the temperature of n2 molecules increases what energy of motion?",
+    "expected_answer": "kinetic energy",
+    "source": "sciq",
+    "distractors": [
+      "compression energy",
+      "residual energy",
+      "emotional energy"
+    ],
+    "support": "Increasing the temperature increases the average kinetic energy of the N2molecules."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "Which radio frequency should you listen to if you want less noise?",
+    "expected_answer": "fm",
+    "source": "sciq",
+    "distractors": [
+      "am",
+      "wave",
+      "cb"
+    ],
+    "support": "FM radio is inherently less subject to noise from stray radio sources than AM radio. The reason is that amplitudes of waves add. So an AM receiver would interpret noise added onto the amplitude of its carrier wave as part of the information. An FM receiver can be made to reject amplitudes other than that of the basic carrier wave and only look for variations in frequency. It is thus easier to reject noise from FM, since noise produces a variation in amplitude. Television is also broadcast on electromagnetic waves. Since the waves must carry a great deal of visual as well as audio information, each channel requires a larger range of frequencies than simple radio transmission. TV channels utilize frequencies in the range of 54 to 88 MHz and 174 to 222 MHz. (The entire FM radio band lies between channels 88 MHz and 174 MHz. ) These TV channels are called VHF (for very high frequency). Other channels called UHF (for ultra high frequency) utilize an even higher frequency range of 470 to 1000 MHz. The TV video signal is AM, while the TV audio is FM. Note that these frequencies are those of free transmission with the user utilizing an old-fashioned roof antenna. Satellite dishes and cable transmission of TV occurs at significantly higher frequencies and is rapidly evolving with the use of the high-definition or HD format."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "Fungi may form mutualistic relationships with plants, algae, cyanobacteria, and what?",
+    "expected_answer": "animals",
+    "source": "sciq",
+    "distractors": [
+      "plants",
+      "farmers",
+      "eggs"
+    ],
+    "support": ""
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "medium",
+    "prompt": "Which cycle tracks the flow of nitrogen through an ecosystem?",
+    "expected_answer": "nitrogen cycle",
+    "source": "sciq",
+    "distractors": [
+      "nitrogen reaction",
+      "water cycle",
+      "life cycle"
+    ],
+    "support": "Mariana Ruiz Villarreal (LadyofHats) for CK-12 Foundation. The nitrogen cycle tracks the flow of nitrogen through an ecosystem . CC BY-NC 3.0."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "What phenomenon makes global winds blow northeast to southwest or the reverse in the northern hemisphere and northwest to southeast or the reverse in the southern hemisphere?",
+    "expected_answer": "coriolis effect",
+    "source": "sciq",
+    "distractors": [
+      "muon effect",
+      "centrifugal effect",
+      "tropical effect"
+    ],
+    "support": "Without Coriolis Effect the global winds would blow north to south or south to north. But Coriolis makes them blow northeast to southwest or the reverse in the Northern Hemisphere. The winds blow northwest to southeast or the reverse in the southern hemisphere."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "Changes from a less-ordered state to a more-ordered state (such as a liquid to a solid) are always what?",
+    "expected_answer": "exothermic",
+    "source": "sciq",
+    "distractors": [
+      "unbalanced",
+      "reactive",
+      "endothermic"
+    ],
+    "support": "Summary Changes of state are examples of phase changes, or phase transitions. All phase changes are accompanied by changes in the energy of a system. Changes from a more-ordered state to a less-ordered state (such as a liquid to a gas) areendothermic. Changes from a less-ordered state to a more-ordered state (such as a liquid to a solid) are always exothermic. The conversion of a solid to a liquid is called fusion (or melting). The energy required to melt 1 mol of a substance is its enthalpy of fusion (ΔHfus). The energy change required to vaporize 1 mol of a substance is the enthalpy of vaporization (ΔHvap). The direct conversion of a solid to a gas is sublimation. The amount of energy needed to sublime 1 mol of a substance is its enthalpy of sublimation (ΔHsub) and is the sum of the enthalpies of fusion and vaporization. Plots of the temperature of a substance versus heat added or versus heating time at a constant rate of heating are calledheating curves. Heating curves relate temperature changes to phase transitions. A superheated liquid, a liquid at a temperature and pressure at which it should be a gas, is not stable. A cooling curve is not exactly the reverse of the heating curve because many liquids do not freeze at the expected temperature. Instead, they form a supercooled liquid, a metastable liquid phase that exists below the normal melting point. Supercooled liquids usually crystallize on standing, or adding a seed crystal of the same or another substance can induce crystallization."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "Kilauea in hawaii is the world’s most continuously active volcano. very active volcanoes characteristically eject red-hot rocks and lava rather than this?",
+    "expected_answer": "smoke and ash",
+    "source": "sciq",
+    "distractors": [
+      "greenhouse gases",
+      "carbon and smog",
+      "magma"
+    ],
+    "support": "Example 3.5 Calculating Projectile Motion: Hot Rock Projectile Kilauea in Hawaii is the world’s most continuously active volcano. Very active volcanoes characteristically eject red-hot rocks and lava rather than smoke and ash. Suppose a large rock is ejected from the volcano with a speed of 25.0 m/s and at an angle 35.0º above the horizontal, as shown in Figure 3.40. The rock strikes the side of the volcano at an altitude 20.0 m lower than its starting point. (a) Calculate the time it takes the rock to follow this path. (b) What are the magnitude and direction of the rock’s velocity at impact?."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "Organisms categorized by what species descriptor demonstrate a version of allopatric speciation and have limited regions of overlap with one another, but where they overlap they interbreed successfully?.",
+    "expected_answer": "ring species",
+    "source": "sciq",
+    "distractors": [
+      "surface species",
+      "fitting species",
+      "species complex"
+    ],
+    "support": "Ring species Ring species demonstrate a version of allopatric speciation. Imagine populations of the species A. Over the geographic range of A there exist a number of subpopulations. These subpopulations (A1 to A5) and (Aa to Ae) have limited regions of overlap with one another but where they overlap they interbreed successfully. But populations A5 and Ae no longer interbreed successfully – are these populations separate species?  In this case, there is no clear-cut answer, but it is likely that in the link between the various populations will be broken and one or more species may form in the future. Consider the black bear Ursus americanus. Originally distributed across all of North America, its distribution is now much more fragmented. Isolated populations are free to adapt to their own particular environments and migration between populations is limited. Clearly the environment in Florida is different from that in Mexico, Alaska, or Newfoundland. Different environments will favor different adaptations. If, over time, these populations were to come back into contact with one another, they might or might not be able to interbreed successfully - reproductive isolation may occur and one species may become many."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "Zinc is more easily oxidized than iron because zinc has a lower reduction potential. since zinc has a lower reduction potential, it is a more what?",
+    "expected_answer": "active metal",
+    "source": "sciq",
+    "distractors": [
+      "much metal",
+      "Trap metal",
+      "usually metal"
+    ],
+    "support": "One way to keep iron from corroding is to keep it painted. The layer of paint prevents the water and oxygen necessary for rust formation from coming into contact with the iron. As long as the paint remains intact, the iron is protected from corrosion. Other strategies include alloying the iron with other metals. For example, stainless steel is mostly iron with a bit of chromium. The chromium tends to collect near the surface, where it forms an oxide layer that protects the iron. Zinc-plated or galvanized iron uses a different strategy. Zinc is more easily oxidized than iron because zinc has a lower reduction potential. Since zinc has a lower reduction potential, it is a more active metal. Thus, even if the zinc coating is scratched, the zinc will still oxidize before the iron. This suggests that this approach should work with other active metals. Another important way to protect metal is to make it the cathode in a galvanic cell. This is cathodic protection and can be used for metals other than just iron. For example, the rusting of underground iron storage tanks and pipes can be prevented or greatly reduced by connecting them to a more active metal such as zinc or magnesium (Figure 17.18). This is also used to protect the metal parts in water heaters. The more active metals (lower reduction potential) are called sacrificial anodes because as they get used up as they corrode (oxidize) at the anode. The metal being protected serves as the cathode, and so does not oxidize (corrode). When the anodes are properly monitored and periodically replaced, the useful lifetime of the iron storage tank can be greatly extended."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "What occurs when the immune system attacks a harmless substance that enters the body from the outside?",
+    "expected_answer": "allergy",
+    "source": "sciq",
+    "distractors": [
+      "panic attack",
+      "nausea",
+      "plague"
+    ],
+    "support": "An allergy occurs when the immune system attacks a harmless substance that enters the body from the outside. A substance that causes an allergy is called an allergen. It is the immune system, not the allergen, that causes the symptoms of an allergy."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "Cutting down on the use of chemical fertilizers and preserving wetlands are ways to prevent what \"unlivable\" regions in bodies of water?",
+    "expected_answer": "dead zones",
+    "source": "sciq",
+    "distractors": [
+      "inhabitable zones",
+      "hostile zones",
+      "fresh zones"
+    ],
+    "support": "Cutting down on the use of chemical fertilizers is one way to prevent dead zones in bodies of water. Preserving wetlands is also important. Wetlands are habitats such as swamps, marshes, and bogs where the ground is soggy or covered with water much of the year. Wetlands slow down and filter runoff before it reaches bodies of water. Wetlands also provide breeding grounds for many different species of organisms."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "This sharing of electrons produces what is known as a covalent bond. covalent bonds are ~20 to 50 times stronger than what?",
+    "expected_answer": "van der waals interactions",
+    "source": "sciq",
+    "distractors": [
+      "Mendelian systems",
+      "Newton's third law",
+      "gravitational pull"
+    ],
+    "support": "any other electron, they become a part of the molecule’s electron system.204 This sharing of electrons produces what is known as a covalent bond. Covalent bonds are ~20 to 50 times stronger than van der Waals interactions. What exactly does that mean? Basically, it takes 20 to 50 times more energy to break a covalent bond compared to a van der Waals interaction. While the bonded form of atoms in a molecule is always more stable than the unbounded form, it may not be stable enough to withstand the energy delivered through collisions with neighboring molecules. Different bonds between different atoms in different molecular contexts differ in terms of bond stability; the bond energy refers the energy needed to break a particular bond. A molecule is stable if the bond energies associated with bonded atoms within the molecule are high enough to survive the energy delivered to the molecule through either collisions with neighboring molecules or the absorption of energy (light). When atoms form a covalent bond, their individual van der Waals surfaces merge to produce a new molecular van der Waals surface. There are a number of ways to draw molecules, but the spacefilling or van der Waals surface view is the most realistic (at least for our purposes). While realistic it can also be confusing, since it obscures the underlying molecular structure, that is, how the atoms in the molecule are linked together. This can be seen in this set of representations of the simple molecule 2methylpropane (→).205 As molecules become larger, as is the case with many biologically important molecules, it can become impossible to appreciate their underlying organization based on a van der Waals surface representation. Because they form a new stable entity, it is not surprising (perhaps) that the properties of a molecule are quite distinct from, although certainly influenced by, the properties of the atoms from which they are composed. To a first order approximation, a molecule’s properties are based on its shape, which is dictated by how the various atoms withjn the molecule are connected to one another. These geometries are imposed by each atom’s underlying quantum mechanical properties and (particularly as molecules get larger, as they so often do in biological systems) the interactions between different parts of the molecule with one another. Some atoms, common to biological systems, such as hydrogen (H), can form only a single covalent bond. Others can make two (oxygen (O) and sulfur (S)), three (nitrogen (N)), four (carbon (C)), or five (phosphorus (P)) bonds. In addition to smaller molecules, biological systems contain a number of distinct types of extremely large molecules, composed of many thousands of atoms; these are known as macromolecules. Such macromolecules are not rigid; they can often fold back on themselves leading to intramolecular interactions. There are also interactions between molecules. The strength and specificity of these interactions can vary dramatically and even small changes in molecular structure (such as caused by mutations and allelic variations) can have dramatic effects."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "What hormone, which is associated with luteinizing hormone and male sexuality, helps bring about physical changes in puberty?",
+    "expected_answer": "testosterone",
+    "source": "sciq",
+    "distractors": [
+      "steroids",
+      "epinephrine",
+      "estrogen"
+    ],
+    "support": "What causes puberty to begin? The hypothalamus in the brain “tells” the pituitary gland to secrete hormones that target the testes. The main pituitary hormone involved is luteinizing hormone (LH) . It stimulates the testes to secrete testosterone. Testosterone, in turn, promotes protein synthesis and growth. It brings about most of the physical changes of puberty, some of which are shown in Figure below . In addition to the changes shown below, during puberty male facial hair begins to grow, the shoulders broaden, and the male voice deepens. You can watch an animation of these and other changes that occur in boys during puberty at the Interactive Body link: http://www. bbc. co. uk/science/humanbody/body/interactives/lifecycle/teenagers/ ."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "Interstitial carbides are produced by the reaction of most transition metals at high temperatures with what element?",
+    "expected_answer": "carbon",
+    "source": "sciq",
+    "distractors": [
+      "hydrogen",
+      "oxygen",
+      "nitrogen"
+    ],
+    "support": "temperatures with electropositive metals such as those of groups 1 and 2 and aluminum produces ionic carbides, which contain discrete metal cations and carbon anions. The identity of the anions depends on the size of the second element. For example, smaller elements such as beryllium and aluminum give methides such as Be2C and Al4C3, which formally contain the C4− ion derived from methane (CH4) by losing all four H atoms as protons. In contrast, larger metals such as sodium and calcium give carbides with stoichiometries of Na2C2 and CaC2. Because these carbides contain the C4− ion, which is derived from acetylene (HC≡CH) by losing both H atoms as protons, they are more properly called acetylides. As discussed in Chapter 21 \"Periodic Trends and the \", Section 21.4 \"The Alkaline Earth Metals (Group 2)\", reacting ionic carbides with dilute aqueous acid results in protonation of the anions to give the parent hydrocarbons: CH4 or C2H2. For many years, miners’ lamps used the reaction of calcium carbide with water to produce a steady supply of acetylene, which was ignited to provide a portable lantern. The reaction of carbon with most transition metals at high temperatures produces interstitial carbides. Due to the less electropositive nature of the transition metals, these carbides contain covalent metal– carbon interactions, which result in different properties: most interstitial carbides are good conductors of electricity, have high melting points, and are among the hardest substances known. Interstitial carbides exhibit a variety of nominal compositions, and they are often nonstoichiometric compounds whose carbon content can vary over a wide range. Among the most important are tungsten carbide (WC), which is used industrially in high-speed cutting tools, and cementite (Fe3C), which is a major component of steel. Elements with an electronegativity similar to that of carbon form covalent carbides, such as silicon carbide (SiC; Equation 22.15) and boron carbide (B4C). These substances are extremely hard, have high melting points, and are chemically inert. For example, silicon carbide is highly resistant to chemical attack at temperatures as high as 1600°C. Because it also maintains its strength at high temperatures, silicon carbide is used in heating elements for electric furnaces and in variable-temperature resistors."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "Fungus-like protist saprobes play what role in a food chain and are specialized to absorb nutrients from nonliving organic matter, such as dead organisms or their wastes?",
+    "expected_answer": "decomposers",
+    "source": "sciq",
+    "distractors": [
+      "aphids",
+      "Soil",
+      "fluxes"
+    ],
+    "support": "Agents of Decomposition The fungus-like protist saprobes are specialized to absorb nutrients from nonliving organic matter, such as dead organisms or their wastes. For instance, many types of oomycetes grow on dead animals or algae. Saprobic protists have the essential function of returning inorganic nutrients to the soil and water. This process allows for new plant growth, which in turn generates sustenance for other organisms along the food chain. Indeed, without saprobe species, such as protists, fungi, and bacteria, life would cease to exist as all organic carbon became “tied up” in dead organisms."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "Hard igneous rocks and easily dissolved sedimentary rocks respond very differently to what natural force?",
+    "expected_answer": "weathering",
+    "source": "sciq",
+    "distractors": [
+      "gravity",
+      "sunlight",
+      "evaporation"
+    ],
+    "support": "Each type of rock weathers in its own way. Certain types of rock are very resistant to weathering. Igneous rocks tend to weather slowly because they are hard. Water cannot easily penetrate them. Granite is a very stable igneous rock. Other types of rock are easily weathered because they dissolve easily in weak acids. Limestone is a sedimentary rock that dissolves easily. When softer rocks wear away, the more resistant rocks form ridges or hills."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "A diet rich in calcium and what vitamin may reduce the risk of osteoporosis and related bone fractures?",
+    "expected_answer": "vitamin d",
+    "source": "sciq",
+    "distractors": [
+      "niacin",
+      "vitamin A",
+      "vitamin C"
+    ],
+    "support": "Skeletal system problems include osteoporosis, bone fractures, and ligament sprains. A diet rick in calcium and vitamin D may reduce the risk of osteoporosis and related bone fractures. Following safe practices may also reduce the risk of fractures as well as sprains."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "What substances serve as catalysts in most of the biochemical reactions that take place in organisms?",
+    "expected_answer": "enzymes",
+    "source": "sciq",
+    "distractors": [
+      "hormones",
+      "carbohydrates",
+      "iseotrops"
+    ],
+    "support": "Enzymes are involved in most of the biochemical reactions that take place in organisms. About 4,000 such reactions are known to be catalyzed by enzymes, but the number may be even higher. Enzymes allow reactions to occur at the rate necessary for life."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "In the absence of air resistance, all falling objects accelerate at the same rate due to what force?",
+    "expected_answer": "gravity",
+    "source": "sciq",
+    "distractors": [
+      "velocity",
+      "weight",
+      "motion"
+    ],
+    "support": "What if you were to drop a bowling ball and a soccer ball at the same time from the same distance above the ground? The bowling ball has greater mass than the basketball, so the pull of gravity on it is greater. Would it fall to the ground faster? No, the bowling ball and basketball would reach the ground at the same time. The reason? The more massive bowling ball is also harder to move because of its greater mass, so it ends up moving at the same acceleration as the soccer ball. This is true of all falling objects. They all accelerate at the same rate due to gravity, unless air resistance affects one object more than another. For example, a falling leaf is slowed down by air resistance more than a falling acorn because of the leaf’s greater surface area. You can simulate the effect of air resistance on acceleration due to gravity by doing the interactive animation at this URL: http://www. science-animations. com/support-files/freefall. swf."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "The ability for a plasma membrane to only allow certain molecules in or out of the cell is referred to as what?",
+    "expected_answer": "selective permeability",
+    "source": "sciq",
+    "distractors": [
+      "periodic permeability",
+      "total permeability",
+      "moderate permeability"
+    ],
+    "support": "The plasma membrane forms a barrier between the cytoplasm inside the cell and the environment outside the cell. It protects and supports the cell and also controls everything that enters and leaves the cell. It allows only certain substances to pass through, while keeping others in or out. The ability to allow only certain molecules in or out of the cell is referred to as selective permeability or semipermeability. To understand how the plasma membrane controls what crosses into or out of the cell, you need to know its composition."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "Whether the organism is a bacterium, plant, or animal, all living things access energy by breaking down these?",
+    "expected_answer": "carbohydrate molecules",
+    "source": "sciq",
+    "distractors": [
+      "lipid molecules",
+      "protein molecules",
+      "oxygen molecules"
+    ],
+    "support": "The Energy Cycle Whether the organism is a bacterium, plant, or animal, all living things access energy by breaking down carbohydrate molecules. But if plants make carbohydrate molecules, why would they need to break them down, especially when it has been shown that the gas organisms release as a “waste product” (CO2) acts as a substrate for the formation of more food in photosynthesis? Remember, living things need energy to perform life functions. In addition, an organism can either make its own food or eat another organism—either way, the food still needs to be broken down. Finally, in the process of breaking down food, called cellular respiration, heterotrophs release needed energy and produce “waste” in the form of CO2 gas. In nature, there is no such thing as waste. Every single atom of matter and energy is conserved, recycling over and over infinitely. Substances change form or move from one type of molecule to another, but their constituent atoms never disappear (Figure 8.20). CO2 is no more a form of waste than oxygen is wasteful to photosynthesis. Both are byproducts of reactions that move on to other reactions. Photosynthesis absorbs light energy to build carbohydrates in chloroplasts, and aerobic cellular respiration releases energy by using oxygen to metabolize carbohydrates in the cytoplasm and mitochondria. Both processes use electron transport chains to capture the energy necessary to drive other reactions. These two powerhouse processes, photosynthesis and cellular respiration, function in biological, cyclical harmony to allow organisms to access life-sustaining energy that originates millions of miles away in a burning star humans call the sun."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "What's the term for the gradual progression from simple plants to larger more complex ones in an area?",
+    "expected_answer": "primary succession",
+    "source": "sciq",
+    "distractors": [
+      "complex progression",
+      "pattern progression",
+      "primary pattern"
+    ],
+    "support": "The pioneer species is soon replaced by other populations. Abiotic factors such as soil quality, water, and climate will determine the species that continue the process of succession. Mosses and grasses will be able to grow in the newly created soil. During early succession, plant species like grasses that grow and reproduce quickly will take over the landscape. Over time, these plants improve the soil and a few shrubs can begin to grow. Slowly, the shrubs are replaced by small trees. Small trees then are succeeded by larger trees. Since trees are more successful at competing for resources than shrubs and grasses, a forest may be the end result of primary succession."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "Internal and external forms of what life process occur as simple diffusion due to a partial pressure gradient?",
+    "expected_answer": "respiration",
+    "source": "sciq",
+    "distractors": [
+      "reproduction",
+      "metabolism",
+      "photosynthesis"
+    ],
+    "support": "Internal Respiration Internal respiration is gas exchange that occurs at the level of body tissues (Figure 22.23). Similar to external respiration, internal respiration also occurs as simple diffusion due to a partial pressure gradient. However, the partial pressure gradients are opposite of those present at the respiratory membrane. The partial pressure of oxygen in tissues is low, about 40 mm Hg, because oxygen is continuously used for cellular respiration. In contrast, the partial pressure of oxygen in the blood is about 100 mm Hg. This creates a pressure gradient that causes oxygen to dissociate from hemoglobin, diffuse out of the blood, cross the interstitial space, and enter the tissue. Hemoglobin that has little oxygen bound to it loses much of its brightness, so that blood returning to the heart is more burgundy in color. Considering that cellular respiration continuously produces carbon dioxide, the partial pressure of carbon dioxide is lower in the blood than it is in the tissue, causing carbon dioxide to diffuse out of the tissue, cross the interstitial fluid, and enter the blood. It is then carried back to the lungs either bound to hemoglobin, dissolved in plasma, or in a converted form. By the time blood returns to the heart, the partial pressure of oxygen has returned to about 40 mm Hg, and the partial pressure."
+  },
+  {
+    "domain": "factual_qa",
+    "difficulty": "hard",
+    "prompt": "The fossil record shows that this type of event is followed by the evolution of new species to fill the habitats where old species lived?",
+    "expected_answer": "mass extinction",
+    "source": "sciq",
+    "distractors": [
+      "minor extinction",
+      "moderate extinction",
+      "formation extinction"
+    ],
+    "support": "After each mass extinction, new species evolve to fill the habitats where old species lived. This is well documented in the fossil record."
+  }
+]

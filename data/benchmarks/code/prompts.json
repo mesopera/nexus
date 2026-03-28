@@ -1,0 +1,542 @@
+[
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "expected_answer": "    if not numbers:\n        return []\n\n    result = []\n\n    for n in numbers[:-1]:\n        result.append(n)\n        result.append(delimeter)\n\n    result.append(numbers[-1])\n\n    return result\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([], 7) == []\n    assert candidate([5, 6, 3, 2], 8) == [5, 8, 6, 8, 3, 8, 2]\n    assert candidate([2, 2, 2], 2) == [2, 2, 2, 2, 2]\n",
+    "entry_point": "intersperse"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n",
+    "expected_answer": "    running_max = None\n    result = []\n\n    for n in numbers:\n        if running_max is None:\n            running_max = n\n        else:\n            running_max = max(running_max, n)\n\n        result.append(running_max)\n\n    return result\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == []\n    assert candidate([1, 2, 3, 4]) == [1, 2, 3, 4]\n    assert candidate([4, 3, 2, 1]) == [4, 4, 4, 4]\n    assert candidate([3, 2, 3, 100, 3]) == [3, 3, 3, 100, 100]\n",
+    "entry_point": "rolling_max"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n",
+    "expected_answer": "    def xor(i, j):\n        if i == j:\n            return '0'\n        else:\n            return '1'\n\n    return ''.join(xor(x, y) for x, y in zip(a, b))\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('111000', '101010') == '010010'\n    assert candidate('1', '1') == '0'\n    assert candidate('0101', '0000') == '0101'\n",
+    "entry_point": "string_xor"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    1\n    >>> greatest_common_divisor(25, 15)\n    5\n    \"\"\"\n",
+    "expected_answer": "    while b:\n        a, b = b, a % b\n    return a\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(3, 7) == 1\n    assert candidate(10, 15) == 5\n    assert candidate(49, 14) == 7\n    assert candidate(144, 60) == 12\n",
+    "entry_point": "greatest_common_divisor"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n",
+    "expected_answer": "    result = []\n\n    for i in range(len(string)):\n        result.append(string[:i+1])\n    return result\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == []\n    assert candidate('asdfgh') == ['a', 'as', 'asd', 'asdf', 'asdfg', 'asdfgh']\n    assert candidate('WWW') == ['W', 'WW', 'WWW']\n",
+    "entry_point": "all_prefixes"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers starting from 0 upto n inclusive.\n    >>> string_sequence(0)\n    '0'\n    >>> string_sequence(5)\n    '0 1 2 3 4 5'\n    \"\"\"\n",
+    "expected_answer": "    return ' '.join([str(x) for x in range(n + 1)])\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(0) == '0'\n    assert candidate(3) == '0 1 2 3'\n    assert candidate(10) == '0 1 2 3 4 5 6 7 8 9 10'\n",
+    "entry_point": "string_sequence"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef count_distinct_characters(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters (regardless of case) does it consist of\n    >>> count_distinct_characters('xyzXYZ')\n    3\n    >>> count_distinct_characters('Jerry')\n    4\n    \"\"\"\n",
+    "expected_answer": "    return len(set(string.lower()))\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == 0\n    assert candidate('abcde') == 5\n    assert candidate('abcde' + 'cade' + 'CADE') == 5\n    assert candidate('aaaaAAAAaaaa') == 1\n    assert candidate('Jerry jERRY JeRRRY') == 5\n",
+    "entry_point": "count_distinct_characters"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string. Count overlaping cases.\n    >>> how_many_times('', 'a')\n    0\n    >>> how_many_times('aaa', 'a')\n    3\n    >>> how_many_times('aaaa', 'aa')\n    3\n    \"\"\"\n",
+    "expected_answer": "    times = 0\n\n    for i in range(len(string) - len(substring) + 1):\n        if string[i:i+len(substring)] == substring:\n            times += 1\n\n    return times\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('', 'x') == 0\n    assert candidate('xyxyxyx', 'x') == 4\n    assert candidate('cacacacac', 'cac') == 4\n    assert candidate('john doe', 'john') == 1\n",
+    "entry_point": "how_many_times"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "from typing import List, Any\n\n\ndef filter_integers(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n",
+    "expected_answer": "    return [x for x in values if isinstance(x, int)]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == []\n    assert candidate([4, {}, [], 23.2, 9, 'adasd']) == [4, 9]\n    assert candidate([3, 'c', 3, 3, 'a', 'b']) == [3, 3, 3]\n",
+    "entry_point": "filter_integers"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef strlen(string: str) -> int:\n    \"\"\" Return length of given string\n    >>> strlen('')\n    0\n    >>> strlen('abc')\n    3\n    \"\"\"\n",
+    "expected_answer": "    return len(string)\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == 0\n    assert candidate('x') == 1\n    assert candidate('asdasnakj') == 9\n",
+    "entry_point": "strlen"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef largest_divisor(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly, smaller than n\n    >>> largest_divisor(15)\n    5\n    \"\"\"\n",
+    "expected_answer": "    for i in reversed(range(n)):\n        if n % i == 0:\n            return i\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(3) == 1\n    assert candidate(7) == 1\n    assert candidate(10) == 5\n    assert candidate(100) == 50\n    assert candidate(49) == 7\n",
+    "entry_point": "largest_divisor"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "from typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 3, 4]\n    \"\"\"\n",
+    "expected_answer": "    import collections\n    c = collections.Counter(numbers)\n    return [n for n in numbers if c[n] <= 1]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == []\n    assert candidate([1, 2, 3, 4]) == [1, 2, 3, 4]\n    assert candidate([1, 2, 3, 2, 4, 3, 5]) == [1, 4, 5]\n",
+    "entry_point": "remove_duplicates"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef flip_case(string: str) -> str:\n    \"\"\" For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\n    >>> flip_case('Hello')\n    'hELLO'\n    \"\"\"\n",
+    "expected_answer": "    return string.swapcase()\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == ''\n    assert candidate('Hello!') == 'hELLO!'\n    assert candidate('These violent delights have violent ends') == 'tHESE VIOLENT DELIGHTS HAVE VIOLENT ENDS'\n",
+    "entry_point": "flip_case"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "from typing import List\n\n\ndef concatenate(strings: List[str]) -> str:\n    \"\"\" Concatenate list of strings into a single string\n    >>> concatenate([])\n    ''\n    >>> concatenate(['a', 'b', 'c'])\n    'abc'\n    \"\"\"\n",
+    "expected_answer": "    return ''.join(strings)\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == ''\n    assert candidate(['x', 'y', 'z']) == 'xyz'\n    assert candidate(['x', 'y', 'z', 'w', 'k']) == 'xyzwk'\n",
+    "entry_point": "concatenate"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef get_positive(l: list):\n    \"\"\"Return only positive numbers in the list.\n    >>> get_positive([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    \"\"\"\n",
+    "expected_answer": "    return [e for e in l if e > 0]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate([-1, -2, 4, 5, 6]) == [4, 5, 6]\n    assert candidate([5, 3, -5, 2, 3, 3, 9, 0, 123, 1, -10]) == [5, 3, 2, 3, 3, 9, 123, 1]\n    assert candidate([-1, -2]) == []\n    assert candidate([]) == []\n\n",
+    "entry_point": "get_positive"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef unique(l: list):\n    \"\"\"Return sorted unique elements in a list\n    >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [0, 2, 3, 5, 9, 123]\n    \"\"\"\n",
+    "expected_answer": "    return sorted(list(set(l)))\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate([5, 3, 5, 2, 3, 3, 9, 0, 123]) == [0, 2, 3, 5, 9, 123]\n\n",
+    "entry_point": "unique"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef max_element(l: list):\n    \"\"\"Return maximum element in the list.\n    >>> max_element([1, 2, 3])\n    3\n    >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    123\n    \"\"\"\n",
+    "expected_answer": "    m = l[0]\n    for e in l:\n        if e > m:\n            m = e\n    return m\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate([1, 2, 3]) == 3\n    assert candidate([5, 3, -5, 2, -3, 3, 9, 0, 124, 1, -10]) == 124\n",
+    "entry_point": "max_element"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\n    >>> fizz_buzz(50)\n    0\n    >>> fizz_buzz(78)\n    2\n    >>> fizz_buzz(79)\n    3\n    \"\"\"\n",
+    "expected_answer": "    ns = []\n    for i in range(n):\n        if i % 11 == 0 or i % 13 == 0:\n            ns.append(i)\n    s = ''.join(list(map(str, ns)))\n    ans = 0\n    for c in s:\n        ans += (c == '7')\n    return ans\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(50) == 0\n    assert candidate(78) == 2\n    assert candidate(79) == 3\n    assert candidate(100) == 3\n    assert candidate(200) == 6\n    assert candidate(4000) == 192\n    assert candidate(10000) == 639\n    assert candidate(100000) == 8026\n\n",
+    "entry_point": "fizz_buzz"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n",
+    "expected_answer": "    import math\n\n    def is_prime(p):\n        if p < 2:\n            return False\n        for k in range(2, min(int(math.sqrt(p)) + 1, p - 1)):\n            if p % k == 0:\n                return False\n        return True\n    f = [0, 1]\n    while True:\n        f.append(f[-1] + f[-2])\n        if is_prime(f[-1]):\n            n -= 1\n        if n == 0:\n            return f[-1]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(1) == 2\n    assert candidate(2) == 3\n    assert candidate(3) == 5\n    assert candidate(4) == 13\n    assert candidate(5) == 89\n    assert candidate(6) == 233\n    assert candidate(7) == 1597\n    assert candidate(8) == 28657\n    assert candidate(9) == 514229\n    assert candidate(10) == 433494437\n\n",
+    "entry_point": "prime_fib"
+  },
+  {
+    "domain": "code",
+    "difficulty": "easy",
+    "prompt": "\n\ndef incr_list(l: list):\n    \"\"\"Return list with elements incremented by 1.\n    >>> incr_list([1, 2, 3])\n    [2, 3, 4]\n    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [6, 4, 6, 3, 4, 4, 10, 1, 124]\n    \"\"\"\n",
+    "expected_answer": "    return [(e + 1) for e in l]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate([]) == []\n    assert candidate([3, 2, 1]) == [4, 3, 2]\n    assert candidate([5, 2, 5, 2, 3, 3, 9, 0, 123]) == [6, 3, 6, 3, 4, 4, 10, 1, 124]\n\n",
+    "entry_point": "incr_list"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+    "expected_answer": "    for idx, elem in enumerate(numbers):\n        for idx2, elem2 in enumerate(numbers):\n            if idx != idx2:\n                distance = abs(elem - elem2)\n                if distance < threshold:\n                    return True\n\n    return False\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([1.0, 2.0, 3.9, 4.0, 5.0, 2.2], 0.3) == True\n    assert candidate([1.0, 2.0, 3.9, 4.0, 5.0, 2.2], 0.05) == False\n    assert candidate([1.0, 2.0, 5.9, 4.0, 5.0], 0.95) == True\n    assert candidate([1.0, 2.0, 5.9, 4.0, 5.0], 0.8) == False\n    assert candidate([1.0, 2.0, 3.0, 4.0, 5.0, 2.0], 0.1) == True\n    assert candidate([1.1, 2.2, 3.1, 4.1, 5.1], 1.0) == True\n    assert candidate([1.1, 2.2, 3.1, 4.1, 5.1], 0.5) == False\n\n",
+    "entry_point": "has_close_elements"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+    "expected_answer": "    result = []\n    current_string = []\n    current_depth = 0\n\n    for c in paren_string:\n        if c == '(':\n            current_depth += 1\n            current_string.append(c)\n        elif c == ')':\n            current_depth -= 1\n            current_string.append(c)\n\n            if current_depth == 0:\n                result.append(''.join(current_string))\n                current_string.clear()\n\n    return result\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('(()()) ((())) () ((())()())') == [\n        '(()())', '((()))', '()', '((())()())'\n    ]\n    assert candidate('() (()) ((())) (((())))') == [\n        '()', '(())', '((()))', '(((())))'\n    ]\n    assert candidate('(()(())((())))') == [\n        '(()(())((())))'\n    ]\n    assert candidate('( ) (( )) (( )( ))') == ['()', '(())', '(()())']\n",
+    "entry_point": "separate_paren_groups"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    >>> truncate_number(3.5)\n    0.5\n    \"\"\"\n",
+    "expected_answer": "    return number % 1.0\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(3.5) == 0.5\n    assert abs(candidate(1.33) - 0.33) < 1e-6\n    assert abs(candidate(123.456) - 0.456) < 1e-6\n",
+    "entry_point": "truncate_number"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef below_zero(operations: List[int]) -> bool:\n    \"\"\" You're given a list of deposit and withdrawal operations on a bank account that starts with\n    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and\n    at that point function should return True. Otherwise it should return False.\n    >>> below_zero([1, 2, 3])\n    False\n    >>> below_zero([1, 2, -4, 5])\n    True\n    \"\"\"\n",
+    "expected_answer": "    balance = 0\n\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n\n    return False\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == False\n    assert candidate([1, 2, -3, 1, 2, -3]) == False\n    assert candidate([1, 2, -4, 5, 6]) == True\n    assert candidate([1, -1, 2, -2, 5, -5, 4, -4]) == False\n    assert candidate([1, -1, 2, -2, 5, -5, 4, -5]) == True\n    assert candidate([1, -2, 2, -2, 5, -5, 4, -4]) == True\n",
+    "entry_point": "below_zero"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n",
+    "expected_answer": "    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert abs(candidate([1.0, 2.0, 3.0]) - 2.0/3.0) < 1e-6\n    assert abs(candidate([1.0, 2.0, 3.0, 4.0]) - 1.0) < 1e-6\n    assert abs(candidate([1.0, 2.0, 3.0, 4.0, 5.0]) - 6.0/5.0) < 1e-6\n\n",
+    "entry_point": "mean_absolute_deviation"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> parse_nested_parens('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n",
+    "expected_answer": "    def parse_paren_group(s):\n        depth = 0\n        max_depth = 0\n        for c in s:\n            if c == '(':\n                depth += 1\n                max_depth = max(depth, max_depth)\n            else:\n                depth -= 1\n\n        return max_depth\n\n    return [parse_paren_group(x) for x in paren_string.split(' ') if x]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('(()()) ((())) () ((())()())') == [2, 3, 1, 3]\n    assert candidate('() (()) ((())) (((())))') == [1, 2, 3, 4]\n    assert candidate('(()(())((())))') == [4]\n",
+    "entry_point": "parse_nested_parens"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n",
+    "expected_answer": "    return [x for x in strings if substring in x]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([], 'john') == []\n    assert candidate(['xxx', 'asd', 'xxy', 'john doe', 'xxxAAA', 'xxx'], 'xxx') == ['xxx', 'xxxAAA', 'xxx']\n    assert candidate(['xxx', 'asd', 'aaaxxy', 'john doe', 'xxxAAA', 'xxx'], 'xx') == ['xxx', 'aaaxxy', 'xxxAAA', 'xxx']\n    assert candidate(['grunt', 'trumpet', 'prune', 'gruesome'], 'run') == ['grunt', 'prune']\n",
+    "entry_point": "filter_by_substring"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n",
+    "expected_answer": "    sum_value = 0\n    prod_value = 1\n\n    for n in numbers:\n        sum_value += n\n        prod_value *= n\n    return sum_value, prod_value\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == (0, 1)\n    assert candidate([1, 1, 1]) == (3, 1)\n    assert candidate([100, 0]) == (100, 0)\n    assert candidate([3, 5, 7]) == (3 + 5 + 7, 3 * 5 * 7)\n    assert candidate([10]) == (10, 10)\n",
+    "entry_point": "sum_product"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef make_palindrome(string: str) -> str:\n    \"\"\" Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> make_palindrome('')\n    ''\n    >>> make_palindrome('cat')\n    'catac'\n    >>> make_palindrome('cata')\n    'catac'\n    \"\"\"\n",
+    "expected_answer": "    if not string:\n        return ''\n\n    beginning_of_suffix = 0\n\n    while not is_palindrome(string[beginning_of_suffix:]):\n        beginning_of_suffix += 1\n\n    return string + string[:beginning_of_suffix][::-1]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == ''\n    assert candidate('x') == 'x'\n    assert candidate('xyz') == 'xyzyx'\n    assert candidate('xyx') == 'xyx'\n    assert candidate('jerry') == 'jerryrrej'\n",
+    "entry_point": "make_palindrome"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List, Optional\n\n\ndef longest(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return the longest one. Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> longest([])\n\n    >>> longest(['a', 'b', 'c'])\n    'a'\n    >>> longest(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\n",
+    "expected_answer": "    if not strings:\n        return None\n\n    maxlen = max(len(x) for x in strings)\n    for s in strings:\n        if len(s) == maxlen:\n            return s\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == None\n    assert candidate(['x', 'y', 'z']) == 'x'\n    assert candidate(['x', 'yyy', 'zzzz', 'www', 'kkkk', 'abc']) == 'zzzz'\n",
+    "entry_point": "longest"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"\n",
+    "expected_answer": "    note_map = {'o': 4, 'o|': 2, '.|': 1}\n    return [note_map[x] for x in music_string.split(' ') if x]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == []\n    assert candidate('o o o o') == [4, 4, 4, 4]\n    assert candidate('.| .| .| .|') == [1, 1, 1, 1]\n    assert candidate('o| o| .| .| o o o o') == [2, 2, 1, 1, 4, 4, 4, 4]\n    assert candidate('o| .| o| .| o o| o o|') == [2, 1, 2, 1, 4, 2, 4, 2]\n",
+    "entry_point": "parse_music"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'one three five'\n    \"\"\"\n",
+    "expected_answer": "    value_map = {\n        'zero': 0,\n        'one': 1,\n        'two': 2,\n        'three': 3,\n        'four': 4,\n        'five': 5,\n        'six': 6,\n        'seven': 7,\n        'eight': 8,\n        'nine': 9\n    }\n    return ' '.join(sorted([x for x in numbers.split(' ') if x], key=lambda x: value_map[x]))\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == ''\n    assert candidate('three') == 'three'\n    assert candidate('three five nine') == 'three five nine'\n    assert candidate('five zero four seven nine eight') == 'zero four five seven eight nine'\n    assert candidate('six five four three two one zero') == 'zero one two three four five six'\n",
+    "entry_point": "sort_numbers"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"\n",
+    "expected_answer": "    closest_pair = None\n    distance = None\n\n    for idx, elem in enumerate(numbers):\n        for idx2, elem2 in enumerate(numbers):\n            if idx != idx2:\n                if distance is None:\n                    distance = abs(elem - elem2)\n                    closest_pair = tuple(sorted([elem, elem2]))\n                else:\n                    new_distance = abs(elem - elem2)\n                    if new_distance < distance:\n                        distance = new_distance\n                        closest_pair = tuple(sorted([elem, elem2]))\n\n    return closest_pair\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([1.0, 2.0, 3.9, 4.0, 5.0, 2.2]) == (3.9, 4.0)\n    assert candidate([1.0, 2.0, 5.9, 4.0, 5.0]) == (5.0, 5.9)\n    assert candidate([1.0, 2.0, 3.0, 4.0, 5.0, 2.2]) == (2.0, 2.2)\n    assert candidate([1.0, 2.0, 3.0, 4.0, 5.0, 2.0]) == (2.0, 2.0)\n    assert candidate([1.1, 2.2, 3.1, 4.1, 5.1]) == (2.2, 3.1)\n\n",
+    "entry_point": "find_closest_elements"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n",
+    "expected_answer": "    min_number = min(numbers)\n    max_number = max(numbers)\n    return [(x - min_number) / (max_number - min_number) for x in numbers]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([2.0, 49.9]) == [0.0, 1.0]\n    assert candidate([100.0, 49.9]) == [1.0, 0.0]\n    assert candidate([1.0, 2.0, 3.0, 4.0, 5.0]) == [0.0, 0.25, 0.5, 0.75, 1.0]\n    assert candidate([2.0, 1.0, 5.0, 3.0, 4.0]) == [0.25, 0.0, 1.0, 0.5, 0.75]\n    assert candidate([12.0, 11.0, 15.0, 13.0, 14.0]) == [0.25, 0.0, 1.0, 0.5, 0.75]\n",
+    "entry_point": "rescale_to_unit"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 2, 2]\n    >>> factorize(25)\n    [5, 5]\n    >>> factorize(70)\n    [2, 5, 7]\n    \"\"\"\n",
+    "expected_answer": "    import math\n    fact = []\n    i = 2\n    while i <= int(math.sqrt(n) + 1):\n        if n % i == 0:\n            fact.append(i)\n            n //= i\n        else:\n            i += 1\n\n    if n > 1:\n        fact.append(n)\n    return fact\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(2) == [2]\n    assert candidate(4) == [2, 2]\n    assert candidate(8) == [2, 2, 2]\n    assert candidate(3 * 19) == [3, 19]\n    assert candidate(3 * 19 * 3 * 19) == [3, 3, 19, 19]\n    assert candidate(3 * 19 * 3 * 19 * 3 * 19) == [3, 3, 3, 19, 19, 19]\n    assert candidate(3 * 19 * 19 * 19) == [3, 19, 19, 19]\n    assert candidate(3 * 2 * 3) == [2, 3, 3]\n",
+    "entry_point": "factorize"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "from typing import List\n\n\ndef filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that start with a given prefix.\n    >>> filter_by_prefix([], 'a')\n    []\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\n",
+    "expected_answer": "    return [x for x in strings if x.startswith(prefix)]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([], 'john') == []\n    assert candidate(['xxx', 'asd', 'xxy', 'john doe', 'xxxAAA', 'xxx'], 'xxx') == ['xxx', 'xxxAAA', 'xxx']\n",
+    "entry_point": "filter_by_prefix"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef is_prime(n):\n    \"\"\"Return true if a given number is prime, and false otherwise.\n    >>> is_prime(6)\n    False\n    >>> is_prime(101)\n    True\n    >>> is_prime(11)\n    True\n    >>> is_prime(13441)\n    True\n    >>> is_prime(61)\n    True\n    >>> is_prime(4)\n    False\n    >>> is_prime(1)\n    False\n    \"\"\"\n",
+    "expected_answer": "    if n < 2:\n        return False\n    for k in range(2, n - 1):\n        if n % k == 0:\n            return False\n    return True\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(6) == False\n    assert candidate(101) == True\n    assert candidate(11) == True\n    assert candidate(13441) == True\n    assert candidate(61) == True\n    assert candidate(4) == False\n    assert candidate(1) == False\n    assert candidate(5) == True\n    assert candidate(11) == True\n    assert candidate(17) == True\n    assert candidate(5 * 17) == False\n    assert candidate(11 * 7) == False\n    assert candidate(13441 * 19) == False\n\n",
+    "entry_point": "is_prime"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [2, 6, 3, 4, 8, 9, 5]\n    \"\"\"\n",
+    "expected_answer": "    l = list(l)\n    l[::3] = sorted(l[::3])\n    return l\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert tuple(candidate([1, 2, 3])) == tuple(sort_third([1, 2, 3]))\n    assert tuple(candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])) == tuple(sort_third([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]))\n    assert tuple(candidate([5, 8, -12, 4, 23, 2, 3, 11, 12, -10])) == tuple(sort_third([5, 8, -12, 4, 23, 2, 3, 11, 12, -10]))\n    assert tuple(candidate([5, 6, 3, 4, 8, 9, 2])) == tuple([2, 6, 3, 4, 8, 9, 5])\n    assert tuple(candidate([5, 8, 3, 4, 6, 9, 2])) == tuple([2, 8, 3, 4, 6, 9, 5])\n    assert tuple(candidate([5, 6, 9, 4, 8, 3, 2])) == tuple([2, 6, 9, 4, 8, 3, 5])\n    assert tuple(candidate([5, 6, 3, 4, 8, 9, 2, 1])) == tuple([2, 6, 3, 4, 8, 9, 5, 1])\n\n",
+    "entry_point": "sort_third"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef sort_even(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\n    to the values of the even indicies of l, but sorted.\n    >>> sort_even([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_even([5, 6, 3, 4])\n    [3, 6, 5, 4]\n    \"\"\"\n",
+    "expected_answer": "    evens = l[::2]\n    odds = l[1::2]\n    evens.sort()\n    ans = []\n    for e, o in zip(evens, odds):\n        ans.extend([e, o])\n    if len(evens) > len(odds):\n        ans.append(evens[-1])\n    return ans\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert tuple(candidate([1, 2, 3])) == tuple([1, 2, 3])\n    assert tuple(candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])) == tuple([-10, 3, -5, 2, -3, 3, 5, 0, 9, 1, 123])\n    assert tuple(candidate([5, 8, -12, 4, 23, 2, 3, 11, 12, -10])) == tuple([-12, 8, 3, 4, 5, 2, 12, 11, 23, -10])\n\n",
+    "entry_point": "sort_even"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef encode_cyclic(s: str):\n    \"\"\"\n    returns encoded string by cycling groups of three characters.\n    \"\"\"\n    # split string to groups. Each of length 3.\n    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\n    # cycle elements in each group. Unless group has fewer elements than 3.\n    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]\n    return \"\".join(groups)\n\n\ndef decode_cyclic(s: str):\n    \"\"\"\n    takes as input string encoded with encode_cyclic function. Returns decoded string.\n    \"\"\"\n",
+    "expected_answer": "    return encode_cyclic(encode_cyclic(s))\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    from random import randint, choice\n    import string\n\n    letters = string.ascii_lowercase\n    for _ in range(100):\n        str = ''.join(choice(letters) for i in range(randint(10, 20)))\n        encoded_str = encode_cyclic(str)\n        assert candidate(encoded_str) == str\n\n",
+    "entry_point": "decode_cyclic"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef triples_sum_to_zero(l: list):\n    \"\"\"\n    triples_sum_to_zero takes a list of integers as an input.\n    it returns True if there are three distinct elements in the list that\n    sum to zero, and False otherwise.\n\n    >>> triples_sum_to_zero([1, 3, 5, 0])\n    False\n    >>> triples_sum_to_zero([1, 3, -2, 1])\n    True\n    >>> triples_sum_to_zero([1, 2, 3, 7])\n    False\n    >>> triples_sum_to_zero([2, 4, -5, 3, 9, 7])\n    True\n    >>> triples_sum_to_zero([1])\n    False\n    \"\"\"\n",
+    "expected_answer": "    for i in range(len(l)):\n        for j in range(i + 1, len(l)):\n            for k in range(j + 1, len(l)):\n                if l[i] + l[j] + l[k] == 0:\n                    return True\n    return False\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate([1, 3, 5, 0]) == False\n    assert candidate([1, 3, 5, -1]) == False\n    assert candidate([1, 3, -2, 1]) == True\n    assert candidate([1, 2, 3, 7]) == False\n    assert candidate([1, 2, 5, 7]) == False\n    assert candidate([2, 4, -5, 3, 9, 7]) == True\n    assert candidate([1]) == False\n    assert candidate([1, 3, 5, -100]) == False\n    assert candidate([100, 3, 5, -100]) == False\n\n",
+    "entry_point": "triples_sum_to_zero"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef pairs_sum_to_zero(l):\n    \"\"\"\n    pairs_sum_to_zero takes a list of integers as an input.\n    it returns True if there are two distinct elements in the list that\n    sum to zero, and False otherwise.\n    >>> pairs_sum_to_zero([1, 3, 5, 0])\n    False\n    >>> pairs_sum_to_zero([1, 3, -2, 1])\n    False\n    >>> pairs_sum_to_zero([1, 2, 3, 7])\n    False\n    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])\n    True\n    >>> pairs_sum_to_zero([1])\n    False\n    \"\"\"\n",
+    "expected_answer": "    for i, l1 in enumerate(l):\n        for j in range(i + 1, len(l)):\n            if l1 + l[j] == 0:\n                return True\n    return False\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate([1, 3, 5, 0]) == False\n    assert candidate([1, 3, -2, 1]) == False\n    assert candidate([1, 2, 3, 7]) == False\n    assert candidate([2, 4, -5, 3, 5, 7]) == True\n    assert candidate([1]) == False\n\n    assert candidate([-3, 9, -1, 3, 2, 30]) == True\n    assert candidate([-3, 9, -1, 3, 2, 31]) == True\n    assert candidate([-3, 9, -1, 4, 2, 30]) == False\n    assert candidate([-3, 9, -1, 4, 2, 31]) == False\n\n",
+    "entry_point": "pairs_sum_to_zero"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef change_base(x: int, base: int):\n    \"\"\"Change numerical base of input number x to base.\n    return string representation after the conversion.\n    base numbers are less than 10.\n    >>> change_base(8, 3)\n    '22'\n    >>> change_base(8, 2)\n    '1000'\n    >>> change_base(7, 2)\n    '111'\n    \"\"\"\n",
+    "expected_answer": "    ret = \"\"\n    while x > 0:\n        ret = str(x % base) + ret\n        x //= base\n    return ret\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(8, 3) == \"22\"\n    assert candidate(9, 3) == \"100\"\n    assert candidate(234, 2) == \"11101010\"\n    assert candidate(16, 2) == \"10000\"\n    assert candidate(8, 2) == \"1000\"\n    assert candidate(7, 2) == \"111\"\n    for x in range(2, 8):\n        assert candidate(x, x + 1) == str(x)\n\n",
+    "entry_point": "change_base"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef fib4(n: int):\n    \"\"\"The Fib4 number sequence is a sequence similar to the Fibbonacci sequnece that's defined as follows:\n    fib4(0) -> 0\n    fib4(1) -> 0\n    fib4(2) -> 2\n    fib4(3) -> 0\n    fib4(n) -> fib4(n-1) + fib4(n-2) + fib4(n-3) + fib4(n-4).\n    Please write a function to efficiently compute the n-th element of the fib4 number sequence.  Do not use recursion.\n    >>> fib4(5)\n    4\n    >>> fib4(6)\n    8\n    >>> fib4(7)\n    14\n    \"\"\"\n",
+    "expected_answer": "    results = [0, 0, 2, 0]\n    if n < 4:\n        return results[n]\n\n    for _ in range(4, n + 1):\n        results.append(results[-1] + results[-2] + results[-3] + results[-4])\n        results.pop(0)\n\n    return results[-1]\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(5) == 4\n    assert candidate(8) == 28\n    assert candidate(10) == 104\n    assert candidate(12) == 386\n\n",
+    "entry_point": "fib4"
+  },
+  {
+    "domain": "code",
+    "difficulty": "medium",
+    "prompt": "\n\ndef encode_shift(s: str):\n    \"\"\"\n    returns encoded string by shifting every character by 5 in the alphabet.\n    \"\"\"\n    return \"\".join([chr(((ord(ch) + 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s])\n\n\ndef decode_shift(s: str):\n    \"\"\"\n    takes as input string encoded with encode_shift function. Returns decoded string.\n    \"\"\"\n",
+    "expected_answer": "    return \"\".join([chr(((ord(ch) - 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s])\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    from random import randint, choice\n    import copy\n    import string\n\n    letters = string.ascii_lowercase\n    for _ in range(100):\n        str = ''.join(choice(letters) for i in range(randint(10, 20)))\n        encoded_str = encode_shift(str)\n        assert candidate(copy.deepcopy(encoded_str)) == str\n\n",
+    "entry_point": "decode_shift"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "import math\n\n\ndef poly(xs: list, x: float):\n    \"\"\"\n    Evaluates polynomial with coefficients xs at point x.\n    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n\n    \"\"\"\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\n\ndef find_zero(xs: list):\n    \"\"\" xs are coefficients of a polynomial.\n    find_zero find x such that poly(x) = 0.\n    find_zero returns only only zero point, even if there are many.\n    Moreover, find_zero only takes list xs having even number of coefficients\n    and largest non zero coefficient as it guarantees\n    a solution.\n    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x\n    -0.5\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3\n    1.0\n    \"\"\"\n",
+    "expected_answer": "    begin, end = -1., 1.\n    while poly(xs, begin) * poly(xs, end) > 0:\n        begin *= 2.0\n        end *= 2.0\n    while end - begin > 1e-10:\n        center = (begin + end) / 2.0\n        if poly(xs, center) * poly(xs, begin) > 0:\n            begin = center\n        else:\n            end = center\n    return begin\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    import math\n    import random\n    rng = random.Random(42)\n    import copy\n    for _ in range(100):\n        ncoeff = 2 * rng.randint(1, 4)\n        coeffs = []\n        for _ in range(ncoeff):\n            coeff = rng.randint(-10, 10)\n            if coeff == 0:\n                coeff = 1\n            coeffs.append(coeff)\n        solution = candidate(copy.deepcopy(coeffs))\n        assert math.fabs(poly(coeffs, solution)) < 1e-4\n\n",
+    "entry_point": "find_zero"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\n\ndef car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"\n",
+    "expected_answer": "    return n**2\n",
+    "source": "humaneval",
+    "test_cases": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(2) == 4\n    assert candidate(3) == 9\n    assert candidate(4) == 16\n    assert candidate(8) == 64\n    assert candidate(10) == 100\n\n",
+    "entry_point": "car_race_collision"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number of the mango fruits in the basket.\n    for examble:\n    fruit_distribution(\"5 apples and 6 oranges\", 19) ->19 - 5 - 6 = 8\n    fruit_distribution(\"0 apples and 1 oranges\",3) -> 3 - 0 - 1 = 2\n    fruit_distribution(\"2 apples and 3 oranges\", 100) -> 100 - 2 - 3 = 95\n    fruit_distribution(\"100 apples and 1 oranges\",120) -> 120 - 100 - 1 = 19\n    \"\"\"\n",
+    "expected_answer": "    lis = list()\n    for i in s.split(' '):\n        if i.isdigit():\n            lis.append(int(i))\n    return n - sum(lis)\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(\"5 apples and 6 oranges\",19) == 8\n    assert candidate(\"5 apples and 6 oranges\",21) == 10\n    assert candidate(\"0 apples and 1 oranges\",3) == 2\n    assert candidate(\"1 apples and 0 oranges\",3) == 2\n    assert candidate(\"2 apples and 3 oranges\",100) == 95\n    assert candidate(\"2 apples and 3 oranges\",5) == 0\n    assert candidate(\"1 apples and 100 oranges\",120) == 19\n",
+    "entry_point": "fruit_distribution"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef pluck(arr):\n    \"\"\"\n    \"Given an array representing a branch of a tree that has non-negative integer nodes\n    your task is to pluck one of the nodes and return it.\n    The plucked node should be the node with the smallest even value.\n    If multiple nodes with the same smallest even value are found return the node that has smallest index.\n\n    The plucked node should be returned in a list, [ smalest_value, its index ],\n    If there are no even values or the given array is empty, return [].\n\n    Example 1:\n        Input: [4,2,3]\n        Output: [2, 1]\n        Explanation: 2 has the smallest even value, and 2 has the smallest index.\n\n    Example 2:\n        Input: [1,2,3]\n        Output: [2, 1]\n        Explanation: 2 has the smallest even value, and 2 has the smallest index. \n\n    Example 3:\n        Input: []\n        Output: []\n    \n    Example 4:\n        Input: [5, 0, 3, 0, 4, 2]\n        Output: [0, 1]\n        Explanation: 0 is the smallest value, but  there are two zeros,\n                     so we will choose the first zero, which has the smallest index.\n\n    Constraints:\n        * 1 <= nodes.length <= 10000\n        * 0 <= node.value\n    \"\"\"\n",
+    "expected_answer": "    if(len(arr) == 0): return []\n    evens = list(filter(lambda x: x%2 == 0, arr))\n    if(evens == []): return []\n    return [min(evens), arr.index(min(evens))]\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert True, \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate([4,2,3]) == [2, 1], \"Error\"\n    assert candidate([1,2,3]) == [2, 1], \"Error\"\n    assert candidate([]) == [], \"Error\"\n    assert candidate([5, 0, 3, 0, 4, 2]) == [0, 1], \"Error\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True, \"This prints if this assert fails 2 (also good for debugging!)\"\n    assert candidate([1, 2, 3, 0, 5, 3]) == [0, 3], \"Error\"\n    assert candidate([5, 4, 8, 4 ,8]) == [4, 1], \"Error\"\n    assert candidate([7, 6, 7, 1]) == [6, 1], \"Error\"\n    assert candidate([7, 9, 7, 1]) == [], \"Error\"\n\n",
+    "entry_point": "pluck"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef will_it_fly(q,w):\n    '''\n    Write a function that returns True if the object q will fly, and False otherwise.\n    The object q will fly if it's balanced (it is a palindromic list) and the sum of its elements is less than or equal the maximum possible weight w.\n\n    Example:\n    will_it_fly([1, 2], 5) ➞ False \n    # 1+2 is less than the maximum possible weight, but it's unbalanced.\n\n    will_it_fly([3, 2, 3], 1) ➞ False\n    # it's balanced, but 3+2+3 is more than the maximum possible weight.\n\n    will_it_fly([3, 2, 3], 9) ➞ True\n    # 3+2+3 is less than the maximum possible weight, and it's balanced.\n\n    will_it_fly([3], 5) ➞ True\n    # 3 is less than the maximum possible weight, and it's balanced.\n    '''\n",
+    "expected_answer": "    if sum(q) > w:\n        return False\n\n    i, j = 0, len(q)-1\n    while i<j:\n        if q[i] != q[j]:\n            return False\n        i+=1\n        j-=1\n    return True\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([3, 2, 3], 9) is True\n    assert candidate([1, 2], 5) is False\n    assert candidate([3], 5) is True\n    assert candidate([3, 2, 3], 1) is False\n\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate([1, 2, 3], 6) is False\n    assert candidate([5], 5) is True\n\n",
+    "entry_point": "will_it_fly"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef total_match(lst1, lst2):\n    '''\n    Write a function that accepts two lists of strings and returns the list that has \n    total number of chars in the all strings of the list less than the other list.\n\n    if the two lists have the same number of chars, return the first list.\n\n    Examples\n    total_match([], []) ➞ []\n    total_match(['hi', 'admin'], ['hI', 'Hi']) ➞ ['hI', 'Hi']\n    total_match(['hi', 'admin'], ['hi', 'hi', 'admin', 'project']) ➞ ['hi', 'admin']\n    total_match(['hi', 'admin'], ['hI', 'hi', 'hi']) ➞ ['hI', 'hi', 'hi']\n    total_match(['4'], ['1', '2', '3', '4', '5']) ➞ ['4']\n    '''\n",
+    "expected_answer": "    l1 = 0\n    for st in lst1:\n        l1 += len(st)\n    \n    l2 = 0\n    for st in lst2:\n        l2 += len(st)\n    \n    if l1 <= l2:\n        return lst1\n    else:\n        return lst2\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert True, \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate([], []) == []\n    assert candidate(['hi', 'admin'], ['hi', 'hi']) == ['hi', 'hi']\n    assert candidate(['hi', 'admin'], ['hi', 'hi', 'admin', 'project']) == ['hi', 'admin']\n    assert candidate(['4'], ['1', '2', '3', '4', '5']) == ['4']\n    assert candidate(['hi', 'admin'], ['hI', 'Hi']) == ['hI', 'Hi']\n    assert candidate(['hi', 'admin'], ['hI', 'hi', 'hi']) == ['hI', 'hi', 'hi']\n    assert candidate(['hi', 'admin'], ['hI', 'hi', 'hii']) == ['hi', 'admin']\n\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True, \"This prints if this assert fails 2 (also good for debugging!)\"\n    assert candidate([], ['this']) == []\n    assert candidate(['this'], []) == []\n\n",
+    "entry_point": "total_match"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef hex_key(num):\n    \"\"\"You have been tasked to write a function that receives \n    a hexadecimal number as a string and counts the number of hexadecimal \n    digits that are primes (prime number, or a prime, is a natural number \n    greater than 1 that is not a product of two smaller natural numbers).\n    Hexadecimal digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.\n    Prime numbers are 2, 3, 5, 7, 11, 13, 17,...\n    So you have to determine a number of the following digits: 2, 3, 5, 7, \n    B (=decimal 11), D (=decimal 13).\n    Note: you may assume the input is always correct or empty string, \n    and symbols A,B,C,D,E,F are always uppercase.\n    Examples:\n    For num = \"AB\" the output should be 1.\n    For num = \"1077E\" the output should be 2.\n    For num = \"ABED1A33\" the output should be 4.\n    For num = \"123456789ABCDEF0\" the output should be 6.\n    For num = \"2020\" the output should be 2.\n    \"\"\"\n",
+    "expected_answer": "    primes = ('2', '3', '5', '7', 'B', 'D')\n    total = 0\n    for i in range(0, len(num)):\n        if num[i] in primes:\n            total += 1\n    return total\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(\"AB\") == 1, \"First test error: \" + str(candidate(\"AB\"))      \n    assert candidate(\"1077E\") == 2, \"Second test error: \" + str(candidate(\"1077E\"))  \n    assert candidate(\"ABED1A33\") == 4, \"Third test error: \" + str(candidate(\"ABED1A33\"))      \n    assert candidate(\"2020\") == 2, \"Fourth test error: \" + str(candidate(\"2020\"))  \n    assert candidate(\"123456789ABCDEF0\") == 6, \"Fifth test error: \" + str(candidate(\"123456789ABCDEF0\"))      \n    assert candidate(\"112233445566778899AABBCCDDEEFF00\") == 12, \"Sixth test error: \" + str(candidate(\"112233445566778899AABBCCDDEEFF00\"))  \n\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate([]) == 0\n\n",
+    "entry_point": "hex_key"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef numerical_letter_grade(grades):\n    \"\"\"It is the last week of the semester and the teacher has to give the grades\n    to students. The teacher has been making her own algorithm for grading.\n    The only problem is, she has lost the code she used for grading.\n    She has given you a list of GPAs for some students and you have to write \n    a function that can output a list of letter grades using the following table:\n             GPA       |    Letter grade\n              4.0                A+\n            > 3.7                A \n            > 3.3                A- \n            > 3.0                B+\n            > 2.7                B \n            > 2.3                B-\n            > 2.0                C+\n            > 1.7                C\n            > 1.3                C-\n            > 1.0                D+ \n            > 0.7                D \n            > 0.0                D-\n              0.0                E\n    \n\n    Example:\n    grade_equation([4.0, 3, 1.7, 2, 3.5]) ==> ['A+', 'B', 'C-', 'C', 'A-']\n    \"\"\"\n",
+    "expected_answer": "\n   \n    letter_grade = []\n    for gpa in grades:\n        if gpa == 4.0:\n            letter_grade.append(\"A+\")\n        elif gpa > 3.7:\n            letter_grade.append(\"A\")\n        elif gpa > 3.3:\n            letter_grade.append(\"A-\")\n        elif gpa > 3.0:\n            letter_grade.append(\"B+\")\n        elif gpa > 2.7:\n            letter_grade.append(\"B\")\n        elif gpa > 2.3:\n            letter_grade.append(\"B-\")\n        elif gpa > 2.0:\n            letter_grade.append(\"C+\")\n        elif gpa > 1.7:\n            letter_grade.append(\"C\")\n        elif gpa > 1.3:\n            letter_grade.append(\"C-\")\n        elif gpa > 1.0:\n            letter_grade.append(\"D+\")\n        elif gpa > 0.7:\n            letter_grade.append(\"D\")\n        elif gpa > 0.0:\n            letter_grade.append(\"D-\")\n        else:\n            letter_grade.append(\"E\")\n    return letter_grade\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([4.0, 3, 1.7, 2, 3.5]) == ['A+', 'B', 'C-', 'C', 'A-']\n    assert candidate([1.2]) == ['D+']\n    assert candidate([0.5]) == ['D-']\n    assert candidate([0.0]) == ['E']\n    assert candidate([1, 0.3, 1.5, 2.8, 3.3]) == ['D', 'D-', 'C-', 'B', 'B+']\n    assert candidate([0, 0.7]) == ['E', 'D-']\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True\n\n",
+    "entry_point": "numerical_letter_grade"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of columns.\n    Given lst, and integer x, find integers x in the list,\n    and return list of tuples, [(x1, y1), (x2, y2) ...] such that\n    each tuple is a coordinate - (row, columns), starting with 0.\n    Sort coordinates initially by rows in ascending order.\n    Also, sort coordinates of the row by columns in descending order.\n    \n    Examples:\n    get_row([\n      [1,2,3,4,5,6],\n      [1,2,3,4,1,6],\n      [1,2,3,4,5,1]\n    ], 1) == [(0, 0), (1, 4), (1, 0), (2, 5), (2, 0)]\n    get_row([], 1) == []\n    get_row([[], [1], [1, 2, 3]], 3) == [(2, 2)]\n    \"\"\"\n",
+    "expected_answer": "    coords = [(i, j) for i in range(len(lst)) for j in range(len(lst[i])) if lst[i][j] == x]\n    return sorted(sorted(coords, key=lambda x: x[1], reverse=True), key=lambda x: x[0])\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([\n        [1,2,3,4,5,6],\n        [1,2,3,4,1,6],\n        [1,2,3,4,5,1]\n    ], 1) == [(0, 0), (1, 4), (1, 0), (2, 5), (2, 0)]\n    assert candidate([\n        [1,2,3,4,5,6],\n        [1,2,3,4,5,6],\n        [1,2,3,4,5,6],\n        [1,2,3,4,5,6],\n        [1,2,3,4,5,6],\n        [1,2,3,4,5,6]\n    ], 2) == [(0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1)]\n    assert candidate([\n        [1,2,3,4,5,6],\n        [1,2,3,4,5,6],\n        [1,1,3,4,5,6],\n        [1,2,1,4,5,6],\n        [1,2,3,1,5,6],\n        [1,2,3,4,1,6],\n        [1,2,3,4,5,1]\n    ], 1) == [(0, 0), (1, 0), (2, 1), (2, 0), (3, 2), (3, 0), (4, 3), (4, 0), (5, 4), (5, 0), (6, 5), (6, 0)]\n    assert candidate([], 1) == []\n    assert candidate([[1]], 2) == []\n    assert candidate([[], [1], [1, 2, 3]], 3) == [(2, 2)]\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True\n\n",
+    "entry_point": "get_row"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n",
+    "expected_answer": "    def isPrime(n):\n        for i in range(2,int(n**0.5)+1):\n            if n%i==0:\n                return False\n\n        return True\n    maxx = 0\n    i = 0\n    while i < len(lst):\n        if(lst[i] > maxx and isPrime(lst[i])):\n            maxx = lst[i]\n        i+=1\n    result = sum(int(digit) for digit in str(maxx))\n    return result\n\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3]) == 10, \"This prints if this assert fails 1 (good for debugging!)\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate([1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1]) == 25, \"This prints if this assert fails 2 (also good for debugging!)\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate([1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3]) == 13, \"This prints if this assert fails 3 (also good for debugging!)\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate([0,724,32,71,99,32,6,0,5,91,83,0,5,6]) == 11, \"This prints if this assert fails 4 (also good for debugging!)\"\n    \n    # Check some edge cases that are easy to work out by hand.\n    assert candidate([0,81,12,3,1,21]) == 3, \"This prints if this assert fails 5 (also good for debugging!)\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate([0,8,1,2,1,7]) == 7, \"This prints if this assert fails 6 (also good for debugging!)\"\n\n    assert candidate([8191]) == 19, \"This prints if this assert fails 7 (also good for debugging!)\"\n    assert candidate([8191, 123456, 127, 7]) == 19, \"This prints if this assert fails 8 (also good for debugging!)\"\n    assert candidate([127, 97, 8192]) == 10, \"This prints if this assert fails 9 (also good for debugging!)\"\n",
+    "entry_point": "skjkasdkd"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"\n",
+    "expected_answer": "    if len(dict.keys()) == 0:\n        return False\n    else:\n        state = \"start\"\n        for key in dict.keys():\n\n            if isinstance(key, str) == False:\n                state = \"mixed\"\n                break\n            if state == \"start\":\n                if key.isupper():\n                    state = \"upper\"\n                elif key.islower():\n                    state = \"lower\"\n                else:\n                    break\n            elif (state == \"upper\" and not key.isupper()) or (state == \"lower\" and not key.islower()):\n                    state = \"mixed\"\n                    break\n            else:\n                break\n        return state == \"upper\" or state == \"lower\" \n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate({\"p\":\"pineapple\", \"b\":\"banana\"}) == True, \"First test error: \" + str(candidate({\"p\":\"pineapple\", \"b\":\"banana\"}))\n    assert candidate({\"p\":\"pineapple\", \"A\":\"banana\", \"B\":\"banana\"}) == False, \"Second test error: \" + str(candidate({\"p\":\"pineapple\", \"A\":\"banana\", \"B\":\"banana\"}))\n    assert candidate({\"p\":\"pineapple\", 5:\"banana\", \"a\":\"apple\"}) == False, \"Third test error: \" + str(candidate({\"p\":\"pineapple\", 5:\"banana\", \"a\":\"apple\"}))\n    assert candidate({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) == False, \"Fourth test error: \" + str(candidate({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}))\n    assert candidate({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) == True, \"Fifth test error: \" + str(candidate({\"STATE\":\"NC\", \"ZIP\":\"12345\" }))      \n    assert candidate({\"fruit\":\"Orange\", \"taste\":\"Sweet\" }) == True, \"Fourth test error: \" + str(candidate({\"fruit\":\"Orange\", \"taste\":\"Sweet\" }))      \n\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate({}) == False, \"1st edge test error: \" + str(candidate({}))\n\n",
+    "entry_point": "check_dict_case"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 15 and closest_integer(\"-14.5\") should return -15.\n    '''\n",
+    "expected_answer": "    from math import floor, ceil\n\n    if value.count('.') == 1:\n        # remove trailing zeros\n        while (value[-1] == '0'):\n            value = value[:-1]\n\n    num = float(value)\n    if value[-2:] == '.5':\n        if num > 0:\n            res = ceil(num)\n        else:\n            res = floor(num)\n    elif len(value) > 0:\n        res = int(round(num))\n    else:\n        res = 0\n\n    return res\n\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(\"10\") == 10, \"Test 1\"\n    assert candidate(\"14.5\") == 15, \"Test 2\"\n    assert candidate(\"-15.5\") == -16, \"Test 3\"\n    assert candidate(\"15.3\") == 15, \"Test 3\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate(\"0\") == 0, \"Test 0\"\n\n",
+    "entry_point": "closest_integer"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n",
+    "expected_answer": "    dic = {\n        1: \"One\",\n        2: \"Two\",\n        3: \"Three\",\n        4: \"Four\",\n        5: \"Five\",\n        6: \"Six\",\n        7: \"Seven\",\n        8: \"Eight\",\n        9: \"Nine\",\n    }\n    sorted_arr = sorted(arr, reverse=True)\n    new_arr = []\n    for var in sorted_arr:\n        try:\n            new_arr.append(dic[var])\n        except:\n            pass\n    return new_arr\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert True, \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate([2, 1, 1, 4, 5, 8, 2, 3]) == [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"], \"Error\"\n    assert candidate([]) == [], \"Error\"\n    assert candidate([1, -1 , 55]) == ['One'], \"Error\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert True, \"This prints if this assert fails 2 (also good for debugging!)\"\n    assert candidate([1, -1, 3, 2]) == [\"Three\", \"Two\", \"One\"]\n    assert candidate([9, 4, 8]) == [\"Nine\", \"Eight\", \"Four\"]\n\n",
+    "entry_point": "by_length"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef even_odd_palindrome(n):\n    \"\"\"\n    Given a positive integer n, return a tuple that has the number of even and odd\n    integer palindromes that fall within the range(1, n), inclusive.\n\n    Example 1:\n\n        Input: 3\n        Output: (1, 2)\n        Explanation:\n        Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\n\n    Example 2:\n\n        Input: 12\n        Output: (4, 6)\n        Explanation:\n        Integer palindrome are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. four of them are even, and 6 of them are odd.\n\n    Note:\n        1. 1 <= n <= 10^3\n        2. returned tuple has the number of even and odd integer palindromes respectively.\n    \"\"\"\n",
+    "expected_answer": "    def is_palindrome(n):\n        return str(n) == str(n)[::-1]\n\n    even_palindrome_count = 0\n    odd_palindrome_count = 0\n\n    for i in range(1, n+1):\n        if i%2 == 1 and is_palindrome(i):\n                odd_palindrome_count += 1\n        elif i%2 == 0 and is_palindrome(i):\n            even_palindrome_count += 1\n    return (even_palindrome_count, odd_palindrome_count)\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(123) == (8, 13)\n    assert candidate(12) == (4, 6)\n    assert candidate(3) == (1, 2)\n    assert candidate(63) == (6, 8)\n    assert candidate(25) == (5, 6)\n    assert candidate(19) == (4, 6)\n    assert candidate(9) == (4, 5), \"This prints if this assert fails 1 (good for debugging!)\"\n\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate(1) == (0, 1), \"This prints if this assert fails 2 (also good for debugging!)\"\n\n",
+    "entry_point": "even_odd_palindrome"
+  },
+  {
+    "domain": "code",
+    "difficulty": "hard",
+    "prompt": "\ndef move_one_ball(arr):\n    \"\"\"We have an array 'arr' of N integers arr[1], arr[2], ..., arr[N].The\n    numbers in the array will be randomly ordered. Your task is to determine if\n    it is possible to get an array sorted in non-decreasing order by performing \n    the following operation on the given array:\n        You are allowed to perform right shift operation any number of times.\n    \n    One right shift operation means shifting all elements of the array by one\n    position in the right direction. The last element of the array will be moved to\n    the starting position in the array i.e. 0th index. \n\n    If it is possible to obtain the sorted array by performing the above operation\n    then return True else return False.\n    If the given array is empty then return True.\n\n    Note: The given list is guaranteed to have unique elements.\n\n    For Example:\n    \n    move_one_ball([3, 4, 5, 1, 2])==>True\n    Explanation: By performin 2 right shift operations, non-decreasing order can\n                 be achieved for the given array.\n    move_one_ball([3, 5, 4, 1, 2])==>False\n    Explanation:It is not possible to get non-decreasing order for the given\n                array by performing any number of right shift operations.\n                \n    \"\"\"\n",
+    "expected_answer": "    if len(arr)==0:\n      return True\n    sorted_array=sorted(arr)\n    my_arr=[]\n    \n    min_value=min(arr)\n    min_index=arr.index(min_value)\n    my_arr=arr[min_index:]+arr[0:min_index]\n    for i in range(len(arr)):\n      if my_arr[i]!=sorted_array[i]:\n        return False\n    return True\n",
+    "source": "humaneval",
+    "test_cases": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([3, 4, 5, 1, 2])==True, \"This prints if this assert fails 1 (good for debugging!)\"\n    assert candidate([3, 5, 10, 1, 2])==True\n    assert candidate([4, 3, 1, 2])==False\n    # Check some edge cases that are easy to work out by hand.\n    assert candidate([3, 5, 4, 1, 2])==False, \"This prints if this assert fails 2 (also good for debugging!)\"\n    assert candidate([])==True\n",
+    "entry_point": "move_one_ball"
+  }
+]

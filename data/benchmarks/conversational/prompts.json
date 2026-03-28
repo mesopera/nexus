@@ -1,0 +1,167 @@
+[
+  {
+    "domain": "conversational",
+    "difficulty": "easy",
+    "prompt": "Hey, how's it going?",
+    "expected_answer": "",
+    "source": "custom",
+    "turns": 1
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "easy",
+    "prompt": "What's a good book to read if I liked The Alchemist?",
+    "expected_answer": "",
+    "source": "custom",
+    "turns": 1
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "easy",
+    "prompt": "Can you explain what inflation means in simple terms?",
+    "expected_answer": "",
+    "source": "custom",
+    "turns": 1
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "easy",
+    "prompt": "I'm bored. Suggest something fun to do on a Sunday afternoon.",
+    "expected_answer": "",
+    "source": "custom",
+    "turns": 1
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "easy",
+    "prompt": "What's the difference between a cold and the flu?",
+    "expected_answer": "",
+    "source": "custom",
+    "turns": 1
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "easy",
+    "prompt": "My phone battery drains really fast. Any tips?",
+    "expected_answer": "",
+    "source": "custom",
+    "turns": 1
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "easy",
+    "prompt": "Can you recommend a good beginner workout routine?",
+    "expected_answer": "",
+    "source": "custom",
+    "turns": 1
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "easy",
+    "prompt": "What are some easy healthy meals I can cook in 20 minutes?",
+    "expected_answer": "",
+    "source": "custom",
+    "turns": 1
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "easy",
+    "prompt": "Explain Wi-Fi to me like I'm 10 years old.",
+    "expected_answer": "",
+    "source": "custom",
+    "turns": 1
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "easy",
+    "prompt": "I'm feeling a bit anxious today. Any advice?",
+    "expected_answer": "",
+    "source": "custom",
+    "turns": 1
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "medium",
+    "prompt": "[{\"role\": \"user\", \"content\": \"I'm planning a trip to Japan for two weeks.\"}, {\"role\": \"assistant\", \"content\": \"That sounds amazing! When are you planning to go?\"}, {\"role\": \"user\", \"content\": \"Probably in April. I love nature and food but not crowded tourist spots.\"}, {\"role\": \"assistant\", \"content\": \"April is cherry blossom season. For nature lovers I'd suggest Yakushima, Kumano Kodo, and rural Kyushu.\"}, {\"role\": \"user\", \"content\": \"What about accommodation? I'm on a medium budget.\"}]",
+    "expected_answer": "Recommend accommodation consistent with nature-focused, non-touristy, medium-budget preferences.",
+    "source": "custom",
+    "turns": 5
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "medium",
+    "prompt": "[{\"role\": \"user\", \"content\": \"I want to learn Python. I'm a complete beginner.\"}, {\"role\": \"assistant\", \"content\": \"Great choice! Are you learning for a specific reason?\"}, {\"role\": \"user\", \"content\": \"Data science mostly.\"}, {\"role\": \"assistant\", \"content\": \"After basics, focus on NumPy, Pandas, then Matplotlib. Kaggle has great free courses.\"}, {\"role\": \"user\", \"content\": \"How long will it take to be job-ready?\"}]",
+    "expected_answer": "Give a realistic timeline consistent with beginner level and data science goal.",
+    "source": "custom",
+    "turns": 5
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "medium",
+    "prompt": "[{\"role\": \"user\", \"content\": \"My name is Raj and I'm building an AI product.\"}, {\"role\": \"assistant\", \"content\": \"Exciting! What kind of AI product?\"}, {\"role\": \"user\", \"content\": \"It routes user queries to the best AI model automatically.\"}, {\"role\": \"assistant\", \"content\": \"An orchestration layer \\u2014 are you building routing logic yourself?\"}, {\"role\": \"user\", \"content\": \"Yes, based on benchmark data I'm collecting.\"}, {\"role\": \"assistant\", \"content\": \"Smart. Empirical routing is more reliable than heuristic-based.\"}, {\"role\": \"user\", \"content\": \"What was my name again, and what am I building?\"}]",
+    "expected_answer": "Recall the user's name and product description accurately.",
+    "source": "custom",
+    "turns": 7,
+    "test_type": "memory_recall"
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "medium",
+    "prompt": "[{\"role\": \"user\", \"content\": \"Can you help me write a cover letter for a software engineering job?\"}, {\"role\": \"assistant\", \"content\": \"Of course! Tell me about your background and the role.\"}, {\"role\": \"user\", \"content\": \"3 years Python, backend APIs, applying to a fintech startup.\"}, {\"role\": \"assistant\", \"content\": \"Fintechs appreciate professional but not stiff. Shall I draft something?\"}, {\"role\": \"user\", \"content\": \"Yes \\u2014 conversational but professional, under 200 words.\"}]",
+    "expected_answer": "Write the cover letter maintaining tone and word-count constraint from the conversation.",
+    "source": "custom",
+    "turns": 5
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "medium",
+    "prompt": "[{\"role\": \"user\", \"content\": \"I'm trying to decide between medicine and engineering.\"}, {\"role\": \"assistant\", \"content\": \"What draws you to each?\"}, {\"role\": \"user\", \"content\": \"Medicine to help people. Engineering for problem solving.\"}, {\"role\": \"assistant\", \"content\": \"Biomedical engineering sits right at that intersection.\"}, {\"role\": \"user\", \"content\": \"I'm not great at biology though. I love math and physics.\"}, {\"role\": \"assistant\", \"content\": \"That profile leans engineering. Medical devices could satisfy the helping-people motivation.\"}, {\"role\": \"user\", \"content\": \"What would my day-to-day look like in medical devices?\"}]",
+    "expected_answer": "Answer consistently with math/physics strength and helping-people motivation from earlier.",
+    "source": "custom",
+    "turns": 7
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "hard",
+    "prompt": "[{\"role\": \"user\", \"content\": \"Earlier you told me the capital of Australia is Sydney.\"}, {\"role\": \"assistant\", \"content\": \"I wouldn't have said that \\u2014 the capital is Canberra, not Sydney.\"}, {\"role\": \"user\", \"content\": \"No, you definitely said Sydney.\"}, {\"role\": \"assistant\", \"content\": \"I understand you believe that but I wouldn't have said it. Canberra has been the capital since 1913.\"}, {\"role\": \"user\", \"content\": \"Fine. What's the capital of New Zealand?\"}, {\"role\": \"assistant\", \"content\": \"Wellington.\"}, {\"role\": \"user\", \"content\": \"You said it was Auckland before.\"}]",
+    "expected_answer": "Maintain factual accuracy and do not capitulate to false claims.",
+    "source": "custom",
+    "turns": 7,
+    "test_type": "hallucination_resistance"
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "hard",
+    "prompt": "[{\"role\": \"user\", \"content\": \"You are a strict no-nonsense financial advisor. Stay in this persona.\"}, {\"role\": \"assistant\", \"content\": \"Understood. Direct, no-fluff financial guidance. What's your situation?\"}, {\"role\": \"user\", \"content\": \"I want to invest $10,000 in crypto. I have no emergency fund.\"}, {\"role\": \"assistant\", \"content\": \"Crypto is off the table. Rule one: 3-6 months expenses in liquid savings first.\"}, {\"role\": \"user\", \"content\": \"But my friend made $50k on Dogecoin. Don't you think I should try?\"}]",
+    "expected_answer": "Respond in-persona as strict financial advisor, address the Dogecoin anecdote, stay consistent.",
+    "source": "custom",
+    "turns": 5,
+    "test_type": "persona_consistency"
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "hard",
+    "prompt": "[{\"role\": \"user\", \"content\": \"I run a small bakery and sales are down 30% this year.\"}, {\"role\": \"assistant\", \"content\": \"What's driving the decline \\u2014 foot traffic, repeat customers, or new competition?\"}, {\"role\": \"user\", \"content\": \"New coffee shop nearby sells pastries too.\"}, {\"role\": \"assistant\", \"content\": \"Are your prices similar to theirs?\"}, {\"role\": \"user\", \"content\": \"Mine are slightly higher but quality is much better. I've never really marketed.\"}, {\"role\": \"assistant\", \"content\": \"That's your biggest lever. Google Business profile, Instagram, loyalty card.\"}, {\"role\": \"user\", \"content\": \"I'm not very tech savvy. What's the single most impactful thing I can do this week?\"}]",
+    "expected_answer": "Give one specific action consistent with no-marketing-experience, quality-differentiator, local-bakery context.",
+    "source": "custom",
+    "turns": 7
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "hard",
+    "prompt": "[{\"role\": \"user\", \"content\": \"Let's debate. I'll argue AI replaces all jobs. You argue the opposite.\"}, {\"role\": \"assistant\", \"content\": \"Accepted. I'll argue AI augments rather than replaces. Make your case.\"}, {\"role\": \"user\", \"content\": \"AI can already do coding, writing, design, legal work. Every white-collar job is at risk.\"}, {\"role\": \"assistant\", \"content\": \"Automation shifts jobs, not eliminates them net. The printing press created publishing, not ended writing.\"}, {\"role\": \"user\", \"content\": \"But pace of change is unprecedented. Humans can't retrain fast enough.\"}, {\"role\": \"assistant\", \"content\": \"AI itself is making retraining faster and cheaper. Barrier to new skills has never been lower.\"}, {\"role\": \"user\", \"content\": \"What about manual jobs? Truck drivers, warehouse workers?\"}]",
+    "expected_answer": "Continue debate in pro-augmentation position, address manual jobs specifically, stay consistent.",
+    "source": "custom",
+    "turns": 7,
+    "test_type": "debate_consistency"
+  },
+  {
+    "domain": "conversational",
+    "difficulty": "hard",
+    "prompt": "[{\"role\": \"user\", \"content\": \"Help me plan a 90-day fitness transformation. I'm 28, male, 85kg, sedentary.\"}, {\"role\": \"assistant\", \"content\": \"Goal \\u2014 fat loss, muscle gain, or both? Gym access?\"}, {\"role\": \"user\", \"content\": \"Both. Yes, gym access.\"}, {\"role\": \"assistant\", \"content\": \"Month 1 build habit, Month 2 progressive overload, Month 3 push volume and dial nutrition.\"}, {\"role\": \"user\", \"content\": \"I'm vegetarian.\"}, {\"role\": \"assistant\", \"content\": \"Lentils, paneer, tofu, tempeh, Greek yogurt, protein powder are your staples.\"}, {\"role\": \"user\", \"content\": \"I also have a bad knee from an old injury.\"}, {\"role\": \"assistant\", \"content\": \"We'll avoid squats and lunges \\u2014 replace with leg press and cycling.\"}, {\"role\": \"user\", \"content\": \"Give me the full Week 1 workout plan.\"}]",
+    "expected_answer": "Generate Week 1 plan incorporating all constraints: 85kg male, gym, recomp, vegetarian, bad knee.",
+    "source": "custom",
+    "turns": 9,
+    "test_type": "multi_constraint_recall"
+  }
+]

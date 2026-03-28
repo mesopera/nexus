@@ -1,0 +1,677 @@
+[
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: The Wanderer",
+    "expected_answer": "Le grand Meaulnes",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: Alain-Fournier",
+    "expected_answer": "Alain-Fournier",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: First Part",
+    "expected_answer": "PREMIÈRE PARTIE",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: I",
+    "expected_answer": "CHAPITRE PREMIER",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: THE BOARDER",
+    "expected_answer": "LE PENSIONNAIRE",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: He arrived at our home on a Sunday of November, 189-.",
+    "expected_answer": "Il arriva chez nous un dimanche de novembre 189-…",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: I still say 'our home,' although the house no longer belongs to us.",
+    "expected_answer": "Je continue à dire « chez nous », bien que la maison ne nous appartienne plus.",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: We left that part of the country nearly fifteen years ago and shall certainly never go back to it.",
+    "expected_answer": "Nous avons quitté le pays depuis bientôt quinze ans et nous n’y reviendrons certainement jamais.",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: We were living in the building of the Higher Elementary Classes at Sainte-Agathe's School.",
+    "expected_answer": "Nous habitions les bâtiments du Cours Supérieur de Sainte-Agathe.",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: My father, whom I used to call M. Seurel as did other pupils, was head of the Middle School and also of the Higher Elementary classes where pupils worked for the preliminary teacher's examination.",
+    "expected_answer": "Mon père, que j’appelais M. Seurel, comme les autres élèves, y dirigeait à la fois le Cours Supérieur, où l’on préparait le brevet d’instituteur, et le Cours Moyen.",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: My mother taught the infants.",
+    "expected_answer": "Ma mère faisait la petite classe.",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: At the time of some new 'appointments,' a whim of fate, due to some inspector or to the Prefect, had led us there.",
+    "expected_answer": "Le hasard des « changements », une décision d’inspecteur ou de préfet nous avaient conduits là.",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: Towards the end of the summer holidays, a long time ago, a peasant cart, preceding our household goods, deposited my mother and myself before the little rusty gate.",
+    "expected_answer": "Vers la fin des vacances, il y a bien longtemps, une voiture de paysan, qui précédait notre ménage, nous avait déposés, ma mère et moi, devant la petite grille rouillée.",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: She had come out to impart her trouble to me. While speaking she had, with her handkerchief, gently wiped my face blackened by the journey.",
+    "expected_answer": "Tout en me parlant, elle avait essuyé doucement avec son mouchoir ma figure d’enfant noircie par le voyage.",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to French. Respond with only the translation.\n\nEnglish: Thus to-day I picture our arrival.",
+    "expected_answer": "C’est ainsi, du moins, que j’imagine aujourd’hui notre arrivée.",
+    "source": "opus_books_en-fr",
+    "language": "French",
+    "language_code": "en-fr"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: Source: Project GutenbergAudiobook available here",
+    "expected_answer": "Source: Wikisource & librodot.com",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: Sense and Sensibility",
+    "expected_answer": "SENTIDO Y SENSIBILIDAD",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: Jane Austen",
+    "expected_answer": "JANE AUSTEN",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: CHAPTER 1",
+    "expected_answer": "CAPITULO I",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: The family of Dashwood had long been settled in Sussex.",
+    "expected_answer": "La familia Dashwood llevaba largo tiempo afincada en Sussex.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: The late owner of this estate was a single man, who lived to a very advanced age, and who for many years of his life, had a constant companion and housekeeper in his sister.",
+    "expected_answer": "El último dueño de esta propiedad había sido un hombre soltero, que alcanzó una muy avanzada edad, y que durante gran parte de su existencia tuvo en su hermana una fiel compañera y ama de casa.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: In the society of his nephew and niece, and their children, the old Gentleman's days were comfortably spent.",
+    "expected_answer": "En compañía de su sobrino y sobrina, y de los hijos de ambos, la vida transcurrió confortablemente para el anciano caballero.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: His attachment to them all increased.",
+    "expected_answer": "Su apego a todos ellos fue creciendo con el “tiempo.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: By a former marriage, Mr. Henry Dashwood had one son: by his present lady, three daughters.",
+    "expected_answer": "De un matrimonio anterior, el señor Henry Dashwood tenía un hijo; y de su esposa actual, tres hijas.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: The son, a steady respectable young man, was amply provided for by the fortune of his mother, which had been large, and half of which devolved on him on his coming of age.",
+    "expected_answer": "El hijo, un joven serio y respetable, tenía el futuro asegurado por la fortuna de su madre, que era cuantiosa, y de cuya mitad había entrado en posesión al cumplir su mayoría de edad.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: By his own marriage, likewise, which happened soon afterwards, he added to his wealth.",
+    "expected_answer": "Además, su propio matrimonio, ocurrido poco después, lo hizo más rico aún.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: To him therefore the succession to the Norland estate was not so really important as to his sisters; for their fortune, independent of what might arise to them from their father's inheriting that property, could be but small.",
+    "expected_answer": "Para él, entonces, el legado de la finca Norland no era en verdad tan importante como para sus hermanas; pues ellas, independientemente de lo que pudiera llegarles si su padre heredaba esa propiedad, eran de fortuna que no puede considerarse sino escasa.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: Their mother had nothing, and their father only seven thousand pounds in his own disposal; for the remaining moiety of his first wife's fortune was also secured to her child, and he had only a life-interest in it.",
+    "expected_answer": "Su madre no tenía nada, y el padre sólo podía disponer de siete mil libras, porque de la restante mitad de la fortuna de su primera esposa también era beneficiario el hijo, y él sólo tenía derecho al usufructo de ese patrimonio mientras viviera.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: The old gentleman died: his will was read, and like almost every other will, gave as much disappointment as pleasure.",
+    "expected_answer": "Murió el anciano caballero, se leyó su testamento y, como casi todos los testamentos, éste dio por igual desilusiones y alegrías.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Spanish. Respond with only the translation.\n\nEnglish: He was neither so unjust, nor so ungrateful, as to leave his estate from his nephew;--but he left it to him on such terms as destroyed half the value of the bequest.",
+    "expected_answer": "En su última voluntad no fue ni tan injusto ni tan desagradecido como para privar a su sobrino de las tierras, pero se las dejó en términos tales que destruían la mitad del valor del legado.",
+    "source": "opus_books_en-es",
+    "language": "Spanish",
+    "language_code": "en-es"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: Yeah, Vincent Hanna.",
+    "expected_answer": "- ラウール - ラウールに ヴィンセント・ハンナだ",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: I'm being held in a basement. I've been abducted with two other girls.",
+    "expected_answer": "いま地下に居ます 他の2人と一緒に誘拐されたんです！",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: It works!",
+    "expected_answer": "動いたよ！",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: I'm just trying to find out what happened here.",
+    "expected_answer": "何があったか突き止めたい",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: You okay?",
+    "expected_answer": "無事か？",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: Do not encrypt the data channel",
+    "expected_answer": "データチャネルを暗号化しない",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: All right.",
+    "expected_answer": "よし",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: Come on, let's get a coffee.",
+    "expected_answer": "コーヒーにしようか",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: Dustin, I know it is our Christ-given duty to help out family but can't we just kill him instead?",
+    "expected_answer": "神に従うなら 家族を助けるべきだけど 殺すわけにはいかない？",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: Mr. White?",
+    "expected_answer": "どうした？",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: You're free to go.",
+    "expected_answer": "どうぞ自由にお帰りください。",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: Doc?",
+    "expected_answer": "ドク？",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: Tom met her in a refugio.",
+    "expected_answer": "トムと宿で会った",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: - Yes, Mama?",
+    "expected_answer": "はい、ママ？",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Japanese. Respond with only the translation.\n\nEnglish: Hermano.",
+    "expected_answer": "兄弟",
+    "source": "opus100_en-ja",
+    "language": "Japanese",
+    "language_code": "en-ja"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: Sixty-first session",
+    "expected_answer": "第六十一届会议",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: I took some medicine for my mu for my mu my muscular for my muscular...",
+    "expected_answer": "减轻酸... 酸痛的药 减轻酸痛的药",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: It's a challenge. God is challenging you. He's calling you a chump.",
+    "expected_answer": "上帝在挑战你，他说你是笨蛋",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: Oh, baby.",
+    "expected_answer": ".. 寶貝",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: - Lucinda?",
+    "expected_answer": "- 盧辛達？",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: Introduction",
+    "expected_answer": "一. 导言",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: Eric Topol: The wireless future of medicine",
+    "expected_answer": "Eric Topol：未来医疗的无线化",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: Damn it, Vaughn!",
+    "expected_answer": "妈的, 沃恩!",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: General Recommendation XXII (Forty-ninth session, 1996)*",
+    "expected_answer": "一般性建议二十一 (第四十八届会议， 1996年)*",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: - Well, what about the witness at the bar?",
+    "expected_answer": "在酒吧的那位证人呢",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: Notes",
+    "expected_answer": "注",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: A land where the powerful do not prey on the powerless.",
+    "expected_answer": "一片强者不会剥削弱者的净土",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: It's funny.",
+    "expected_answer": "这很有趣。",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: Johnny Sack?",
+    "expected_answer": "強尼沙克？",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Chinese. Respond with only the translation.\n\nEnglish: I just want you to be you again.",
+    "expected_answer": "我只是想让你变成以前的你而已。 I just want you to be you again.",
+    "source": "opus100_en-zh",
+    "language": "Chinese",
+    "language_code": "en-zh"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: QPL v1.0",
+    "expected_answer": "@ item license",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: on that Day God will justly requite them, and they will realize that God is the truth, that makes all things manifest.",
+    "expected_answer": "a rãnar dl Allah Yake cika musu sakamakonsu tabbatacce kuma sunã sanin (cẽwa) lalle Allah, Shi ne Gaskiya bayyananna.",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: and [silver] doors for their houses and [silver] couches on which they recline,",
+    "expected_answer": "Kuma a gidãjensu, Mu sanya) ƙyamãre da gadãje, a kansu suke kishingiɗa.",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: Nor any loving friend.",
+    "expected_answer": "\"Kuma bã mu da abõki, masõyi.\"",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: Has he obtained knowledge of the Unseen, or has he taken a covenant with the Most Compassionate Lord?",
+    "expected_answer": "Shin, yã tsinkãyi gaibi ne, kõ kuwa yã ɗauki wani alkawari daga Mai rahama ne?",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: Pharaoh said: “Haman, build for me a lofty tower that I may scale the highways --",
+    "expected_answer": "Kuma Fir'auna ye ce, \"Yã Hãmana! Ka gina mini bẽne, dammãnĩna zã ni isa ga ƙõfõfi.\"",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: The Thamud and 'Ad denied the consequential calamity.",
+    "expected_answer": "Samũdãwa da Ãdãwa sun ƙaryatar da kiran gaskiya mai dũkar zũciya!",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: which none shall touch except the purified;",
+    "expected_answer": "Bãbu mai shãfa shi fãce waɗanda aka tsarkake.",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: Those who were given the Book did not become divided except after clear evidence was given to them.",
+    "expected_answer": "Kuma waɗanda aka bai wa Littafi ba su sãɓa wa juna ba face bayan hujjar ta je musu.",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: And by morning it lay as if it had already been harvested, a barren land.",
+    "expected_answer": "Sai ta wãyi gari (baƙa ƙirin) kamar dare.",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: He says: \"I have wasted a great deal of wealth.\"",
+    "expected_answer": "Yana cẽwa \"Na halakarda dũkiya mai yawa,\"",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: Perfect our light for us, and forgive us; indeed You are Able to do all things.”",
+    "expected_answer": "Ka cika mana haskenmu, kuma Ka yi mana gãfara. Lalle Kai, a kan dukkan kõme, Yã kai Mai ikon yi ne.\"",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: Thus is the word of thy Lord proved true against those who rebel: Verily they will not believe.",
+    "expected_answer": "Kamar wancan ne kalmar Ubangijinka, ta tabbata a kan waɗanda suka yi fãsiƙanci, cẽwa haƙĩƙa sũ, bã zã su yi ĩmãni ba.",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: This is the straight path leading to your Lord.",
+    "expected_answer": "Wannan ita ce hanya ta Ubangijinka madaidaiciya.",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  },
+  {
+    "domain": "multilingual",
+    "difficulty": "medium",
+    "prompt": "Translate the following sentence from English to Hausa. Respond with only the translation.\n\nEnglish: “We bring you the truth, and we are truthful.”",
+    "expected_answer": "\"Kuma mun zo maka da gaskiya. Kuma lalle ne mũ, haƙĩƙa, mãsu gaskiya ne.\"",
+    "source": "opus100_en-ha",
+    "language": "Hausa",
+    "language_code": "en-ha"
+  }
+]
