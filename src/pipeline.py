@@ -52,10 +52,12 @@ import requests
 import os
 from pathlib import Path
 from datetime import datetime, timezone
+from dotenv import load_dotenv
+load_dotenv()
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 
-BASE_DIR    = Path("/workspaces/nexus")
+BASE_DIR    = Path(__file__).resolve().parent.parent
 BENCH_DIR   = BASE_DIR / "data" / "benchmarks"
 RESULTS_DIR = BASE_DIR / "data" / "results"
 
@@ -133,26 +135,26 @@ MODELS = {
     # API models — keys loaded from environment variables
     # These are stubs for now — connectors built in Task 22
     "gemini-1.5-flash": {
-        "display_name":    "Gemini 1.5 Flash",
+        "display_name":    "Gemini 2.5 Flash",
         "provider":        "Google AI Studio",
         "provider_type":   "google",
-        "api_model_id":    "gemini-1.5-flash",
+        "api_model_id":    "gemini-2.5-flash",
         "env_key":         "GOOGLE_API_KEY",
-        "rate_limit_s":    2.0,
+        "rate_limit_s":    10.0,
     },
     "gemini-2.0-flash": {
-        "display_name":    "Gemini 2.0 Flash",
+        "display_name":    "Gemini 2.5 Flash",
         "provider":        "Google AI Studio",
         "provider_type":   "google",
-        "api_model_id":    "gemini-2.0-flash",
+        "api_model_id":    "gemini-2.5-flash",
         "env_key":         "GOOGLE_API_KEY",
-        "rate_limit_s":    2.0,
+        "rate_limit_s":    10.0,
     },
     "llama3.1-70b-groq": {
         "display_name":    "LLaMA 3.1 70B",
         "provider":        "Groq API",
         "provider_type":   "groq",
-        "api_model_id":    "llama-3.1-70b-versatile",
+        "api_model_id":    "llama-3.3-70b-versatile",
         "env_key":         "GROQ_API_KEY",
         "rate_limit_s":    3.0,
     },
@@ -164,21 +166,21 @@ MODELS = {
         "env_key":         "GROQ_API_KEY",
         "rate_limit_s":    2.0,
     },
-    "mixtral-groq": {
-        "display_name":    "Mixtral 8x7B",
-        "provider":        "Groq API",
-        "provider_type":   "groq",
-        "api_model_id":    "mixtral-8x7b-32768",
-        "env_key":         "GROQ_API_KEY",
-        "rate_limit_s":    2.0,
-    },
     "gemma2-groq": {
-        "display_name":    "Gemma 2 9B",
-        "provider":        "Groq API",
-        "provider_type":   "groq",
-        "api_model_id":    "gemma2-9b-it",
-        "env_key":         "GROQ_API_KEY",
-        "rate_limit_s":    2.0,
+    "display_name":  "Llama 4 Scout 17B",
+    "provider":      "Groq API",
+    "provider_type": "groq",
+    "api_model_id":  "meta-llama/llama-4-scout-17b-16e-instruct",
+    "env_key":       "GROQ_API_KEY",
+    "rate_limit_s":  10.0,
+    },
+    "mixtral-groq": {
+        "display_name":  "Qwen3 32B",
+        "provider":      "Groq API",
+        "provider_type": "groq",
+        "api_model_id":  "qwen/qwen3-32b",
+        "env_key":       "GROQ_API_KEY",
+        "rate_limit_s":  2.0,
     },
     "llama3.1-together": {
         "display_name":    "LLaMA 3.1 70B",
@@ -298,21 +300,208 @@ def query_ollama(prompt: str, model_config: dict) -> dict:
             "error": str(e)
         }
 
-
 def query_api(prompt: str, model_config: dict) -> dict:
-    """
-    Stub for API-based providers.
-    Full implementations added in Task 22 (Groq, Together AI, Mistral, Google, Cohere).
-    """
+    """Connectors for Groq, Together AI, Google, Mistral, Cohere, HuggingFace."""
     provider = model_config["provider_type"]
-    return {
-        "response": "",
-        "latency_s": 0,
-        "prompt_tokens": 0,
-        "response_tokens": 0,
-        "total_tokens": 0,
-        "error": f"API connector for '{provider}' not yet implemented. See Task 22."
-    }
+    env_key  = model_config.get("env_key", "")
+    api_key  = os.environ.get(env_key, "")
+
+    if not api_key:
+        return {
+            "response": "", "latency_s": 0,
+            "prompt_tokens": 0, "response_tokens": 0, "total_tokens": 0,
+            "error": f"Missing environment variable: {env_key}"
+        }
+
+    start = time.time()
+
+    try:
+        # ── Groq ──────────────────────────────────────────────────────────
+        if provider == "groq":
+            resp = requests.post(
+                "https://api.groq.com/openai/v1/chat/completions",
+                headers={"Authorization": f"Bearer {api_key}",
+                         "Content-Type": "application/json"},
+                json={
+                    "model": model_config["api_model_id"],
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 2048,
+                    "temperature": 0.7,
+                },
+                timeout=60
+            )
+            resp.raise_for_status()
+            data    = resp.json()
+            latency = round(time.time() - start, 3)
+            choice  = data["choices"][0]["message"]["content"].strip()
+            usage   = data.get("usage", {})
+            return {
+                "response":        choice,
+                "latency_s":       latency,
+                "prompt_tokens":   usage.get("prompt_tokens", 0),
+                "response_tokens": usage.get("completion_tokens", 0),
+                "total_tokens":    usage.get("total_tokens", 0),
+                "error":           None,
+            }
+
+        # ── Together AI ───────────────────────────────────────────────────
+        elif provider == "together":
+            resp = requests.post(
+                "https://api.together.xyz/v1/chat/completions",
+                headers={"Authorization": f"Bearer {api_key}",
+                         "Content-Type": "application/json"},
+                json={
+                    "model": model_config["api_model_id"],
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 2048,
+                    "temperature": 0.7,
+                },
+                timeout=60
+            )
+            resp.raise_for_status()
+            data    = resp.json()
+            latency = round(time.time() - start, 3)
+            choice  = data["choices"][0]["message"]["content"].strip()
+            usage   = data.get("usage", {})
+            return {
+                "response":        choice,
+                "latency_s":       latency,
+                "prompt_tokens":   usage.get("prompt_tokens", 0),
+                "response_tokens": usage.get("completion_tokens", 0),
+                "total_tokens":    usage.get("total_tokens", 0),
+                "error":           None,
+            }
+
+        # ── Google (Gemini) ───────────────────────────────────────────────
+        elif provider == "google":
+            model_id = model_config["api_model_id"]
+            resp = requests.post(
+                f"https://generativelanguage.googleapis.com/v1beta/models/{model_id}:generateContent?key={api_key}",
+                headers={"Content-Type": "application/json"},
+                json={
+                    "contents": [{"parts": [{"text": prompt}]}],
+                    "generationConfig": {"maxOutputTokens": 2048, "temperature": 0.7},
+                },
+                timeout=60
+            )
+            resp.raise_for_status()
+            data      = resp.json()
+            latency   = round(time.time() - start, 3)
+            text      = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+            usage     = data.get("usageMetadata", {})
+            return {
+                "response":        text,
+                "latency_s":       latency,
+                "prompt_tokens":   usage.get("promptTokenCount", 0),
+                "response_tokens": usage.get("candidatesTokenCount", 0),
+                "total_tokens":    usage.get("totalTokenCount", 0),
+                "error":           None,
+            }
+
+        # ── Mistral ───────────────────────────────────────────────────────
+        elif provider == "mistral":
+            resp = requests.post(
+                "https://api.mistral.ai/v1/chat/completions",
+                headers={"Authorization": f"Bearer {api_key}",
+                         "Content-Type": "application/json"},
+                json={
+                    "model": model_config["api_model_id"],
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 2048,
+                    "temperature": 0.7,
+                },
+                timeout=60
+            )
+            resp.raise_for_status()
+            data    = resp.json()
+            latency = round(time.time() - start, 3)
+            choice  = data["choices"][0]["message"]["content"].strip()
+            usage   = data.get("usage", {})
+            return {
+                "response":        choice,
+                "latency_s":       latency,
+                "prompt_tokens":   usage.get("prompt_tokens", 0),
+                "response_tokens": usage.get("completion_tokens", 0),
+                "total_tokens":    usage.get("total_tokens", 0),
+                "error":           None,
+            }
+
+        # ── Cohere ────────────────────────────────────────────────────────
+        elif provider == "cohere":
+            resp = requests.post(
+                "https://api.cohere.com/v2/chat",
+                headers={"Authorization": f"Bearer {api_key}",
+                         "Content-Type": "application/json"},
+                json={
+                    "model": model_config["api_model_id"],
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 2048,
+                    "temperature": 0.7,
+                },
+                timeout=60
+            )
+            resp.raise_for_status()
+            data    = resp.json()
+            latency = round(time.time() - start, 3)
+            text    = data["message"]["content"][0]["text"].strip()
+            usage   = data.get("usage", {}).get("tokens", {})
+            return {
+                "response":        text,
+                "latency_s":       latency,
+                "prompt_tokens":   usage.get("input_tokens", 0),
+                "response_tokens": usage.get("output_tokens", 0),
+                "total_tokens":    usage.get("input_tokens", 0) + usage.get("output_tokens", 0),
+                "error":           None,
+            }
+
+        # ── HuggingFace ───────────────────────────────────────────────────
+        elif provider == "huggingface":
+            model_id = model_config["api_model_id"]
+            resp = requests.post(
+                f"https://api-inference.huggingface.co/models/{model_id}/v1/chat/completions",
+                headers={"Authorization": f"Bearer {api_key}",
+                         "Content-Type": "application/json"},
+                json={
+                    "model": model_id,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 2048,
+                    "temperature": 0.7,
+                },
+                timeout=120
+            )
+            resp.raise_for_status()
+            data    = resp.json()
+            latency = round(time.time() - start, 3)
+            choice  = data["choices"][0]["message"]["content"].strip()
+            usage   = data.get("usage", {})
+            return {
+                "response":        choice,
+                "latency_s":       latency,
+                "prompt_tokens":   usage.get("prompt_tokens", 0),
+                "response_tokens": usage.get("completion_tokens", 0),
+                "total_tokens":    usage.get("total_tokens", 0),
+                "error":           None,
+            }
+
+        else:
+            return {
+                "response": "", "latency_s": 0,
+                "prompt_tokens": 0, "response_tokens": 0, "total_tokens": 0,
+                "error": f"Unknown provider type: {provider}"
+            }
+
+    except requests.exceptions.HTTPError as e:
+        return {
+            "response": "", "latency_s": round(time.time() - start, 3),
+            "prompt_tokens": 0, "response_tokens": 0, "total_tokens": 0,
+            "error": f"HTTP {e.response.status_code}: {e.response.text[:200]}"
+        }
+    except Exception as e:
+        return {
+            "response": "", "latency_s": round(time.time() - start, 3),
+            "prompt_tokens": 0, "response_tokens": 0, "total_tokens": 0,
+            "error": str(e)
+        }
 
 
 def query_model(prompt: str, model_config: dict) -> dict:
@@ -350,7 +539,7 @@ def run_domain(model_id: str, domain: str, adversarial: bool = False,
         print(f"  [SKIP] {prompt_file} not found")
         return []
 
-    with open(prompt_file) as f:
+    with open(prompt_file,encoding="utf-8") as f:
         prompts = json.load(f)
 
     tag         = "adversarial" if adversarial else "standard"
